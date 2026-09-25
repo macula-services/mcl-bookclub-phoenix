@@ -29,7 +29,12 @@ defmodule MclBookclubPhoenix.MixProject do
   # the supervisor starts :evoq_event_handler children.
   defp deps do
     [
-      {:mcl_om, "~> 0.28"},
+      # The 0.29 floor is deliberate: this service is one of several
+      # providers of org procedure mcl-bookclub/*, and 0.29 is what spreads
+      # co-org providers across serving stations (a station's registry holds
+      # one advertiser per procedure) -- a build on 0.28 would name the same
+      # serving station as the Erlang twin and be un-dialable (mcl-om#5).
+      {:mcl_om, "~> 0.29"},
       {:macula, "~> 12.2"},
       {:evoq, "~> 1.24"},
       {:host_bookclub, in_umbrella: true},
