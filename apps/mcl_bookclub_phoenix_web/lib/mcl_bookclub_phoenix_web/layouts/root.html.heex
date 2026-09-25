@@ -60,7 +60,7 @@
   </head>
   <body>
     {@inner_content}
-    <script defer src="/assets/app.js">
+    <script defer src={"/assets/app.js?v=" <> MclBookclubPhoenixWeb.BuildInfo.asset_version()}>
     </script>
   </body>
 </html>

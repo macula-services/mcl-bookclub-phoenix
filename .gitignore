@@ -7,3 +7,5 @@ erl_crash.dump
 mcl_bookclub_phoenix-*.tar
 /tmp/
 /priv/plts/
+mix.lock
+/apps/mcl_bookclub_phoenix_web/priv/static/assets/

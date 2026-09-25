@@ -8,7 +8,32 @@ defmodule MclBookclubPhoenixUmbrella.MixProject do
       start_permanent: Mix.env() == :prod,
       elixirc_options: elixirc_options(),
       deps: deps(),
+      releases: releases(),
       dialyzer: dialyzer()
+    ]
+  end
+
+  defp releases do
+    [
+      mcl_bookclub_phoenix: [
+        # Every app in the umbrella must be listed explicitly here --
+        # `mix release` does NOT auto-include the rest just because
+        # they're present under apps/. Adding a new umbrella app and
+        # forgetting to add it here compiles fine and boots fine (`mix
+        # phx.server`/`mix run` don't have this restriction), then
+        # silently excludes it from the actual release with no error --
+        # the whiteboard found this the hard way when its web app's
+        # Endpoint never started inside the built container. Listed in
+        # boot order: the departments, then the service (whose
+        # mcl_om:boot/1 opens the store), then the web app.
+        applications: [
+          host_bookclub: :permanent,
+          project_bookclub: :permanent,
+          query_bookclub: :permanent,
+          mcl_bookclub_phoenix: :permanent,
+          mcl_bookclub_phoenix_web: :permanent
+        ]
+      ]
     ]
   end
 

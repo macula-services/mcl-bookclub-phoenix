@@ -6,8 +6,10 @@ import Config
 #
 # A TEST run gets a FRESH store dir every time: the reckon store leaves dets
 # files behind, and a second run against the same dir fails to reopen them.
+# config_env() (NOT Mix.env(): Mix is not available inside a release's boot,
+# and this file is evaluated there too) tells the two apart.
 data_dir =
-  if Mix.env() == :test do
+  if config_env() == :test do
     Path.join(System.tmp_dir!(), "mcl_bookclub_test_#{System.unique_integer([:positive])}")
   else
     System.get_env("MCL_DATA_DIR", "/tmp/mcl_bookclub")
@@ -81,14 +83,3 @@ config :mcl_bookclub_phoenix_web, MclBookclubPhoenixWeb.Endpoint,
   # auth/multi-tenancy yet), not an oversight -- revisit once this sits
   # behind a real host/domain.
   check_origin: false
-
-# NODE_PATH=deps lets esbuild resolve bare `import "phoenix"` /
-# `import "phoenix_live_view"` against the Hex deps' own package.json
-# (each ships priv/static/*.mjs) -- no npm install needed for those two.
-config :esbuild,
-  version: "0.25.0",
-  mcl_bookclub_phoenix_web: [
-    args: ~w(js/app.js --bundle --target=es2022 --outfile=../priv/static/assets/app.js),
-    cd: Path.expand("../apps/mcl_bookclub_phoenix_web/assets", __DIR__),
-    env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
-  ]
