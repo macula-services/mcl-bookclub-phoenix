@@ -7,6 +7,9 @@ defmodule MclBookclubPhoenix.Service do
 
   @behaviour :mcl_om_service
 
+  alias ProjectBookclub.BookclubReadModelStore
+  alias QueryBookclub.BookclubQueryStore
+
   @impl true
   def info do
     %{
@@ -22,17 +25,64 @@ defmodule MclBookclubPhoenix.Service do
   @impl true
   def stop(_state), do: :ok
 
+  # The service's health IS the health of its read path: the two sqlite
+  # store processes the divisions run. Their absence or silence means the
+  # club's record is unreachable, however healthy the rest of the node
+  # looks.
   @impl true
-  def health, do: :ok
+  def health do
+    case {ping(BookclubReadModelStore), ping(BookclubQueryStore)} do
+      {:ok, :ok} ->
+        :ok
 
-  # Nothing advertised yet: the walking skeleton's query is answered
-  # locally until the capability slice.
+      {read_model, query} ->
+        {:degraded, %{read_model_store: read_model, query_store: query}}
+    end
+  end
+
+  # The stores are gen_servers; a missing or dead one exits on call. The
+  # catch below turns that into the honest `:missing' signal instead of
+  # taking the whole health request down with it -- the same try/catch the
+  # Erlang twin uses, for the same reason.
+  defp ping(name) do
+    GenServer.call(name, :ping, 1000)
+  catch
+    :exit, _ -> :missing
+  end
+
+  # WHAT THIS SERVICE ANNOUNCES IT CAN DO. Each entry is a promise that
+  # something answers: get_bookclub_by_id is the mesh procedure, wired to
+  # the QRY desk through MclBookclubPhoenix.GetBookclubByIdHandler -- the
+  # SAME procedure name the Erlang twin advertises, so a peer cannot tell
+  # the two apart.
   @impl true
-  def capabilities, do: []
+  def capabilities do
+    [
+      %{
+        name: "get_bookclub_by_id",
+        version: 1,
+        handler: {MclBookclubPhoenix.GetBookclubByIdHandler, []},
+        auth: :open
+      }
+    ]
+  end
 
+  # THE AUTHORITY THIS SERVICE ASKS THE REALM FOR, and deliberately
+  # nothing more: the one procedure it serves and the three fact topics
+  # its emitters publish. Popped, an attacker gains precisely this and no
+  # more, which is the whole point of listing it.
   @impl true
   def identity_spec do
-    %{scope: "mcl-bookclub", actions: [], resources: [], ttl_days: 30}
+    %{
+      scope: "mcl-bookclub",
+      actions: ["get_bookclub_by_id"],
+      resources: [
+        "bookclub/member/member_registered_v1",
+        "bookclub/book/book_procured_v1",
+        "bookclub/book/book_retired_v1"
+      ],
+      ttl_days: 30
+    }
   end
 
   # The store the service owns -- the same two callbacks, in Elixir, that

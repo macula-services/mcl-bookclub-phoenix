@@ -23,7 +23,34 @@ defmodule ProjectBookclub.BookclubReadModelStore do
         " initiated_by TEXT NOT NULL," <>
         " initiated_at INTEGER NOT NULL," <>
         " event_id     TEXT NOT NULL," <>
-        " version      INTEGER NOT NULL)"
+        " version      INTEGER NOT NULL)",
+      "CREATE TABLE IF NOT EXISTS members (" <>
+        " member_id     TEXT PRIMARY KEY," <>
+        " club_id       TEXT NOT NULL," <>
+        " name          TEXT NOT NULL," <>
+        " status        TEXT NOT NULL," <>
+        " registered_at INTEGER NOT NULL," <>
+        " event_id      TEXT NOT NULL," <>
+        " version       INTEGER NOT NULL)",
+      "CREATE TABLE IF NOT EXISTS books (" <>
+        " book_id      TEXT PRIMARY KEY," <>
+        " club_id      TEXT NOT NULL," <>
+        " title        TEXT NOT NULL," <>
+        " author       TEXT NOT NULL," <>
+        " status       TEXT NOT NULL," <>
+        " procured_at  INTEGER NOT NULL," <>
+        " event_id     TEXT NOT NULL," <>
+        " version      INTEGER NOT NULL)",
+      "CREATE TABLE IF NOT EXISTS readings (" <>
+        " reading_id  TEXT PRIMARY KEY," <>
+        " member_id   TEXT NOT NULL," <>
+        " book_id     TEXT NOT NULL," <>
+        " status      TEXT NOT NULL," <>
+        " started_at  INTEGER NOT NULL," <>
+        " pages_read  INTEGER NOT NULL," <>
+        " finished_at INTEGER," <>
+        " event_id    TEXT NOT NULL," <>
+        " version     INTEGER NOT NULL)"
     ]
   end
 

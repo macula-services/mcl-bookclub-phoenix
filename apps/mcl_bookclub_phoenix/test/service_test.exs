@@ -7,8 +7,12 @@ defmodule MclBookclubPhoenix.ServiceTest do
 
   test "every required callback is exported" do
     for {fun, arity} <- [
-          {:info, 0}, {:start, 1}, {:stop, 1}, {:health, 0},
-          {:capabilities, 0}, {:identity_spec, 0}
+          {:info, 0},
+          {:start, 1},
+          {:stop, 1},
+          {:health, 0},
+          {:capabilities, 0},
+          {:identity_spec, 0}
         ] do
       assert function_exported?(Service, fun, arity), "missing #{fun}/#{arity}"
     end
@@ -31,9 +35,39 @@ defmodule MclBookclubPhoenix.ServiceTest do
     assert is_list(Service.data_dir())
   end
 
-  test "nothing is announced or asked for yet" do
-    assert Service.capabilities() == []
-    assert %{scope: scope, actions: [], resources: []} = Service.identity_spec()
-    assert scope == "mcl-bookclub"
+  test "the capability is the Erlang twin's, name for name" do
+    # get_bookclub_by_id, the same procedure the Erlang bookclub advertises
+    # -- a peer cannot tell the two apart by the procedure name.
+    assert [
+             %{
+               name: "get_bookclub_by_id",
+               version: 1,
+               handler: {MclBookclubPhoenix.GetBookclubByIdHandler, []},
+               auth: :open
+             }
+           ] = Service.capabilities()
+  end
+
+  test "the identity spec asks for exactly what the contract needs" do
+    # One procedure, three fact topics -- popped, an attacker gains
+    # precisely this and no more.
+    assert %{
+             scope: "mcl-bookclub",
+             actions: ["get_bookclub_by_id"],
+             resources: resources,
+             ttl_days: 30
+           } = Service.identity_spec()
+
+    assert Enum.sort(resources) == [
+             "bookclub/book/book_procured_v1",
+             "bookclub/book/book_retired_v1",
+             "bookclub/member/member_registered_v1"
+           ]
+  end
+
+  test "the identity spec's actions match the capabilities, one for one" do
+    advertised = Enum.map(Service.capabilities(), & &1.name)
+    asked = Service.identity_spec().actions
+    assert Enum.sort(advertised) == Enum.sort(asked)
   end
 end

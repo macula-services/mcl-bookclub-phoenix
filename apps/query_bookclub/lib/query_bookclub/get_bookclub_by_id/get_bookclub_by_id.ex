@@ -19,9 +19,7 @@ defmodule QueryBookclub.GetBookclubById.GetBookclubById do
   def find(_), do: {:error, :missing_club_id}
 
   defp found([[club_id, name, status, by, at] | _]) do
-    {:ok,
-     %{club_id: club_id, name: name, status: status, initiated_by: by,
-       initiated_at: at}}
+    {:ok, %{club_id: club_id, name: name, status: status, initiated_by: by, initiated_at: at}}
   end
 
   defp found([]), do: {:error, :not_found}

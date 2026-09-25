@@ -23,19 +23,23 @@ view that can't violate one.
 ## Layout
 
 ```
-apps/host_bookclub/         CMD: commands, events, aggregates (Elixir structs)
-apps/project_bookclub/      PRJ: events -> sqlite, idempotent writes
-apps/query_bookclub/        QRY: pure query modules
-apps/mcl_bookclub_phoenix/  the facade (the :mcl_om_service behaviour) + LiveView
+apps/host_bookclub/             CMD: commands, events, aggregates (Elixir structs)
+apps/project_bookclub/          PRJ: events -> sqlite, idempotent writes + the pubsub seam
+apps/query_bookclub/            QRY: pure query modules
+apps/mcl_bookclub_phoenix/      the facade (the :mcl_om_service behaviour + mesh emitters)
+apps/mcl_bookclub_phoenix_web/  the LiveView admin (presentation only)
 ```
 
-## Status: walking skeleton
+## Status: full domain + LiveView admin
 
-The first vertical slice: `initiate_bookclub_v1` dispatches on its own
-reckon-db stream, `bookclub_initiated_v1` projects into sqlite, and
-`get_bookclub_by_id` answers. The remaining desks, the emitters, the mesh
-capabilities and the LiveView admin follow the shapes this slice
-established.
+Every desk the Erlang twin has (initiate/archive/plan_party, member
+register/unregister, book procure/retire, reading start/finish, the
+plan_party policy), every projection (clubs/members/books/readings), every
+query desk, the three mesh emitters, the `get_bookclub_by_id` capability,
+and the LiveView admin console -- task buttons dispatch the divisions'
+entry points, lookups call the query desks, and the projection pubsub seam
+feeds the live feed. Remaining: CI workflows + Containerfile + the fleet
+rollout as the second club.
 
 ## Running it
 
@@ -46,3 +50,5 @@ established.
     mix dialyzer
 
 The runtime is pinned in `.tool-versions` (OTP 28.4.3, Elixir 1.18.4).
+The admin serves on `MCL_HTTP_PORT` (default 4000); build its JS first
+with `mix esbuild mcl_bookclub_phoenix_web`.

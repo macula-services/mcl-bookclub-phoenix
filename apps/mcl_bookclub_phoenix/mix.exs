@@ -23,11 +23,15 @@ defmodule MclBookclubPhoenix.MixProject do
     ]
   end
 
-  # The facade: the mcl_om contract and the divisions it wires. The
-  # LiveView app joins in the next slice.
+  # The facade: the mcl_om contract, the mesh face (facts + emitters +
+  # capabilities) and the divisions it wires. macula and evoq are declared
+  # directly because the emitters call :macula.publish/:macula_topic and
+  # the supervisor starts :evoq_event_handler children.
   defp deps do
     [
       {:mcl_om, "~> 0.28"},
+      {:macula, "~> 12.2"},
+      {:evoq, "~> 1.24"},
       {:host_bookclub, in_umbrella: true},
       {:project_bookclub, in_umbrella: true},
       {:query_bookclub, in_umbrella: true}

@@ -25,9 +25,12 @@ defmodule HostBookclub.InitiateBookclub.MaybeInitiateBookclub do
         {:error, :already_initiated}
 
       {false, :ok} ->
-        event = BookclubInitiatedV1.new(%{
-          club_id: cmd.club_id, name: cmd.name, initiated_by: cmd.initiated_by
-        })
+        event =
+          BookclubInitiatedV1.new(%{
+            club_id: cmd.club_id,
+            name: cmd.name,
+            initiated_by: cmd.initiated_by
+          })
 
         case event do
           {:ok, e} -> {:ok, [BookclubInitiatedV1.to_map(e)]}

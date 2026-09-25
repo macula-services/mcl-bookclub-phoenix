@@ -6,3 +6,4 @@ erl_crash.dump
 *.ez
 mcl_bookclub_phoenix-*.tar
 /tmp/
+/priv/plts/

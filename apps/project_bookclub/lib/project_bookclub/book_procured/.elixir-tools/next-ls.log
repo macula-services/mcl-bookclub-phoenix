@@ -1,0 +1,2146 @@
+
+08:48:06.788 [info] Loading 121 CA(s) from :otp store
+
+08:48:06.908 id=1 [debug] handled request client -> server initialize in 78ms
+
+08:48:06.951 [debug] sent notification server -> client window/logMessage
+
+08:48:06.952 [debug] handled notification client -> server textDocument/didOpen in 3ms
+
+08:48:06.954 [debug] NextLS v0.23.4 has initialized!
+
+08:48:06.954 [debug] sent notification server -> client window/logMessage
+
+08:48:06.955 [debug] Log file located at /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/apps/project_bookclub/lib/project_bookclub/book_procured/.elixir-tools/next-ls.log
+
+08:48:06.958 [debug] sent notification server -> client window/logMessage
+
+08:48:06.958 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+08:48:07.059 id=2 [debug] handled request client -> server textDocument/documentSymbol in 79ms
+
+08:48:07.312 [debug] sent notification server -> client window/logMessage
+
+08:48:07.312 [warning] Failed to unzip and install the bundled Elixir archive.
+
+** (MatchError) no match of right hand side value: {"=ERROR REPORT==== 25-Sep-2026::08:48:07.122590 ===\nbeam/beam_load.c(604): Error loading function 'Elixir.Kernel':maybe_atomize_calendar/2:\n  please re-compile this module with an Erlang/OTP 29 compiler or update your Erlang/OTP version\n\n\nLogger - error: {removed_failing_filter,logger_translator}\r\nRuntime terminating during boot ({undef,[{'Elixir.Kernel',inspect,[<0.91.0>],[]},{'Elixir.Exception',format_banner,3,[{file,\"lib/exception.ex\"},{line,148}]},{'Elixir.Kernel.CLI',format_error,3,[{file,\"lib/kernel/cli.ex\"},{line,107}]},{'Elixir.Kernel.CLI',print_error,3,[{file,\"lib/kernel/cli.ex\"},{line,177}]},{'Elixir.Kernel.CLI',exec_fun,2,[{file,\"lib/kernel/cli.ex\"},{line,165}]},{'Elixir.Kernel.CLI',run,1,[{file,\"lib/kernel/cli.ex\"},{line,54}]},{init,start_it,1,[]},{init,start_em,1,[]}]})\r\n\r\nCrash dump is being written to: erl_crash.dump...done\r\n", 1}
+    (next_ls 0.23.4) lib/next_ls/runtime/bundled_elixir.ex:55: NextLS.Runtime.BundledElixir.install/2
+    (next_ls 0.23.4) lib/next_ls.ex:882: NextLS.handle_notification/2
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:528: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.3.0) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:524: anonymous fn/4 in GenLSP.loop/3
+    (gen_lsp 0.11.0) lib/gen_lsp.ex:601: anonymous fn/4 in GenLSP.attempt/4
+    (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
+
+
+
+08:48:07.312 [debug] sent notification server -> client window/logMessage
+
+08:48:07.312 [debug] Booting runtimes...
+
+08:48:07.315 id=261 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:07.318 [debug] sent notification server -> client $/progress
+
+08:48:07.333 [debug] sent notification server -> client window/logMessage
+
+08:48:07.334 [info] Beginning DB migration...
+
+08:48:07.345 [debug] sent notification server -> client window/logMessage
+
+08:48:07.345 [info] Database is being upgraded from version 0 to 7.
+
+This will trigger a full recompilation in order to re-index your codebase.
+
+
+08:48:07.346 [debug] sent notification server -> client window/logMessage
+
+08:48:07.346 [info] Finished DB migration...
+
+08:48:07.346 [debug] sent notification server -> client window/logMessage
+
+08:48:07.346 [info] Booting runtime for mcl-bookclub-phoenix.
+
+- elixir: /home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin/elixir
+- zombie wrapper script: /home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/lib/next_ls-0.23.4/priv/cmd
+- working_dir: /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix
+- command: /home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin/elixir --no-halt --sname nextls-runtime-1790318887346252925 --cookie HHYKTHK2JHVUZI3HDBMAF64GPJFPN4AV4Y7CQDE27SSFQKZPVAFQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3Im5leHQtbHMtMTc5MDMxODg4Njc5ODI1Nzc5MUBob3N0MDAAAADnAAAAAGq2GSc=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin:/home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/bin:/home/rl/.local/share/nvim/mason/bin:/home/rl/.asdf/installs/rust/1.90.0/bin:/home/rl/.local/share/mise/installs/go/1.27.0/bin:/home/rl/.local/share/mise/dotnet-root:/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin:/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/.mix/escripts:/home/rl/.local/share/mise/installs/erlang/29.0.6/bin:/home/rl/.local/share/mise/installs/rebar/3.27.0:/home/rl/.local/share/mise/installs/fzf/0.74.3:/home/rl/.local/share/mise/installs/helm/4.2.4/linux-amd64:/home/rl/.local/share/mise/installs/java/temurin-musl-25.0.0+36.0.LTS/bin:/home/rl/.local/share/mise/installs/just/1.58.0:/home/rl/.local/share/mise/installs/kubectl/1.37.0:/home/rl/.local/share/mise/installs/kind/0.33.0:/home/rl/.local/share/mise/installs/lua/5.4.7/bin:/home/rl/.local/share/mise/installs/lua/5.4.7/luarocks/bin:/home/rl/.local/share/mise/installs/node/26.8.1/bin:/home/rl/.local/share/mise/installs/ollama/0.33.3/bin:/home/rl/.local/share/mise/installs/python/3.14.7t/bin:/home/rl/.local/share/mise/installs/terraform/1.16.1:/home/rl/.local/share/mise/installs/zig/0.16.0/bin:/home/rl/.local/share/mise/shims:/home/rl/.asdf/shims:/usr/lib/ccache/bin/:/home/rl/.local/bin:/home/rl/.local/share/../bin:/home/rl/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/rl/go/bin:/home/rl/.cargo/bin:/home/rl/.cargo/bin:/opt/nvim-linux64/bin
+
+
+08:48:07.346 [debug] handled notification client -> server initialized in 399ms
+
+08:48:07.783 [debug] sent notification server -> client $/progress
+
+08:48:07.783 [debug] sent notification server -> client window/logMessage
+
+08:48:07.783 [debug] Unchecked dependencies for environment dev:
+* phoenix_pubsub (Hex package)
+
+
+08:48:07.784 [debug] sent notification server -> client window/logMessage
+
+08:48:07.784 [error] Runtime for folder mcl-bookclub-phoenix failed to initialize
+
+08:48:07.784 [debug] sent notification server -> client window/logMessage
+
+08:48:07.784 [error] The runtime for mcl-bookclub-phoenix has crashed with reason: {:shutdown, :unchecked_dependencies}
+
+08:48:07.784 [debug] sent notification server -> client window/logMessage
+
+08:48:07.785 [info] Booting runtime for mcl-bookclub-phoenix.
+
+- elixir: /home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin/elixir
+- zombie wrapper script: /home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/lib/next_ls-0.23.4/priv/cmd
+- working_dir: /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix
+- command: /home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin/elixir --no-halt --sname nextls-runtime-1790318887784675642 --cookie HHYKTHK2JHVUZI3HDBMAF64GPJFPN4AV4Y7CQDE27SSFQKZPVAFQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3Im5leHQtbHMtMTc5MDMxODg4Njc5ODI1Nzc5MUBob3N0MDAAAADnAAAAAGq2GSc=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin:/home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/bin:/home/rl/.local/share/nvim/mason/bin:/home/rl/.asdf/installs/rust/1.90.0/bin:/home/rl/.local/share/mise/installs/go/1.27.0/bin:/home/rl/.local/share/mise/dotnet-root:/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin:/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/.mix/escripts:/home/rl/.local/share/mise/installs/erlang/29.0.6/bin:/home/rl/.local/share/mise/installs/rebar/3.27.0:/home/rl/.local/share/mise/installs/fzf/0.74.3:/home/rl/.local/share/mise/installs/helm/4.2.4/linux-amd64:/home/rl/.local/share/mise/installs/java/temurin-musl-25.0.0+36.0.LTS/bin:/home/rl/.local/share/mise/installs/just/1.58.0:/home/rl/.local/share/mise/installs/kubectl/1.37.0:/home/rl/.local/share/mise/installs/kind/0.33.0:/home/rl/.local/share/mise/installs/lua/5.4.7/bin:/home/rl/.local/share/mise/installs/lua/5.4.7/luarocks/bin:/home/rl/.local/share/mise/installs/node/26.8.1/bin:/home/rl/.local/share/mise/installs/ollama/0.33.3/bin:/home/rl/.local/share/mise/installs/python/3.14.7t/bin:/home/rl/.local/share/mise/installs/terraform/1.16.1:/home/rl/.local/share/mise/installs/zig/0.16.0/bin:/home/rl/.local/share/mise/shims:/home/rl/.asdf/shims:/usr/lib/ccache/bin/:/home/rl/.local/bin:/home/rl/.local/share/../bin:/home/rl/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/rl/go/bin:/home/rl/.cargo/bin:/home/rl/.cargo/bin:/opt/nvim-linux64/bin
+
+
+08:48:07.786 [debug] sent notification server -> client window/logMessage
+
+08:48:07.786 id=517 [debug] sent request server -> client window/showMessageRequest
+
+08:48:07.786 [info] The runtime for mcl-bookclub-phoenix has successfully shut down.
+
+08:48:13.627 [debug] sent notification server -> client window/logMessage
+
+08:48:13.627 [info] Running `mix deps.get` in directory /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix
+
+08:48:15.040 [debug] sent notification server -> client window/logMessage
+
+08:48:15.040 [info] Restarting runtime mcl-bookclub-phoenix for directory /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix
+
+08:48:15.040 [debug] sent notification server -> client window/logMessage
+
+08:48:15.040 [info] Resolving Hex dependencies...
+Resolution completed in 0.063s
+New:
+  phoenix_pubsub 2.3.0
+Unchanged:
+  aten 0.6.0
+  bunt 1.0.0
+  cowboy 2.12.0 VULNERABLE!
+    EEF-CVE-2026-8466 (HIGH)
+    aka: CVE-2026-8466, GHSA-jfc2-q6qh-g5x8
+    Unbounded buffer accumulation in multipart header parsing causes denial of service in cowboy
+    https://osv.dev/vulnerability/EEF-CVE-2026-8466
+
+    EEF-CVE-2026-65624 (MEDIUM)
+    aka: CVE-2026-65624
+    Cowboy HTTP/1.1 max_headers Bypass via Duplicate Header Names Enables Memory Exhaustion
+    https://osv.dev/vulnerability/EEF-CVE-2026-65624
+
+    GHSA-w4f7-4cxr-rv3c (MEDIUM)
+    aka: CVE-2026-43966, EEF-CVE-2026-43966
+    cowboy and gun affected by an HTTP Request/Response Splitting vulnerability
+    https://osv.dev/vulnerability/GHSA-w4f7-4cxr-rv3c
+  cowlib 2.13.0 VULNERABLE!
+    EEF-CVE-2026-43971 (MEDIUM)
+    aka: CVE-2026-43971
+    Link Header Directive Smuggling via Unescaped target/rel/Attribute Keys in cow_link:link/1
+    https://osv.dev/vulnerability/EEF-CVE-2026-43971
+
+    EEF-CVE-2026-43969 (LOW)
+    aka: CVE-2026-43969, GHSA-g2wm-735q-3f56
+    Cookie Request Header Injection via Unvalidated Encoder in cow_cookie:cookie/1
+    https://osv.dev/vulnerability/EEF-CVE-2026-43969
+
+    EEF-CVE-2026-43968 (MEDIUM)
+    aka: CVE-2026-43968, GHSA-hv23-4qp7-8c8r
+    CR Injection in SSE Encoder Enables Event Splitting via cow_sse:event/1
+    https://osv.dev/vulnerability/EEF-CVE-2026-43968
+
+    EEF-CVE-2026-7790 (HIGH)
+    aka: CVE-2026-7790, GHSA-32p9-57cr-4x65
+    Unbounded chunk-size hex digits in cowlib cause quadratic CPU and memory DoS
+    https://osv.dev/vulnerability/EEF-CVE-2026-7790
+
+    EEF-CVE-2026-43970 (HIGH)
+    aka: CVE-2026-43970, GHSA-84f2-rp86-235p
+    Decompression Bomb in cow_spdy:inflate/2 Allows Memory Exhaustion via Crafted SPDY Frame
+    https://osv.dev/vulnerability/EEF-CVE-2026-43970
+
+    EEF-CVE-2026-43966 (MEDIUM)
+    aka: CVE-2026-43966, GHSA-w4f7-4cxr-rv3c
+    HTTP Response Splitting via Non-VCHAR Bytes in cow_http_struct_hd:escape_string/2
+    https://osv.dev/vulnerability/EEF-CVE-2026-43966
+
+    EEF-CVE-2026-59248 (HIGH)
+    aka: CVE-2026-59248
+    Unbounded HPACK/QPACK prefixed-integer decoding in Cowlib causes memory-exhaustion DoS
+    https://osv.dev/vulnerability/EEF-CVE-2026-59248
+  credo 1.7.19
+  dialyxir 1.4.8
+  erlex 0.2.9
+  esqlite 0.9.0
+  evoq 1.24.2
+  file_system 1.1.1
+  gen_batch_server 0.8.9
+  gproc 1.3.0
+  horus 0.3.1
+  jason 1.4.5
+  jsx 3.1.0
+  khepri 0.17.2
+  macula 12.4.0
+  mcl_om 0.28.1
+  ra 2.16.12
+  ranch 1.8.0
+  reckon_db 5.11.10
+  reckon_evoq 2.7.0
+  reckon_gater 3.11.2
+  seshat 0.6.0
+  telemetry 1.3.0
+* Getting phoenix_pubsub (Hex package)
+Found packages with security advisories, see above for details
+
+
+08:48:15.041 [debug] sent notification server -> client window/logMessage
+
+08:48:15.041 [info] Beginning DB migration...
+
+08:48:15.041 [debug] sent notification server -> client window/logMessage
+
+08:48:15.041 [info] Database is on the latest version: 7
+
+08:48:15.041 [debug] sent notification server -> client window/logMessage
+
+08:48:15.041 [info] Finished DB migration...
+
+08:48:15.041 [debug] sent notification server -> client window/logMessage
+
+08:48:15.041 [info] Booting runtime for mcl-bookclub-phoenix.
+
+- elixir: /home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin/elixir
+- zombie wrapper script: /home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/lib/next_ls-0.23.4/priv/cmd
+- working_dir: /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix
+- command: /home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin/elixir --no-halt --sname nextls-runtime-1790318895041324048 --cookie HHYKTHK2JHVUZI3HDBMAF64GPJFPN4AV4Y7CQDE27SSFQKZPVAFQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3Im5leHQtbHMtMTc5MDMxODg4Njc5ODI1Nzc5MUBob3N0MDAAAAD4AAAAAGq2GSc=
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin:/home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/bin:/home/rl/.local/share/nvim/mason/bin:/home/rl/.asdf/installs/rust/1.90.0/bin:/home/rl/.local/share/mise/installs/go/1.27.0/bin:/home/rl/.local/share/mise/dotnet-root:/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/bin:/home/rl/.local/share/mise/installs/elixir/1.20.4-otp-28/.mix/escripts:/home/rl/.local/share/mise/installs/erlang/29.0.6/bin:/home/rl/.local/share/mise/installs/rebar/3.27.0:/home/rl/.local/share/mise/installs/fzf/0.74.3:/home/rl/.local/share/mise/installs/helm/4.2.4/linux-amd64:/home/rl/.local/share/mise/installs/java/temurin-musl-25.0.0+36.0.LTS/bin:/home/rl/.local/share/mise/installs/just/1.58.0:/home/rl/.local/share/mise/installs/kubectl/1.37.0:/home/rl/.local/share/mise/installs/kind/0.33.0:/home/rl/.local/share/mise/installs/lua/5.4.7/bin:/home/rl/.local/share/mise/installs/lua/5.4.7/luarocks/bin:/home/rl/.local/share/mise/installs/node/26.8.1/bin:/home/rl/.local/share/mise/installs/ollama/0.33.3/bin:/home/rl/.local/share/mise/installs/python/3.14.7t/bin:/home/rl/.local/share/mise/installs/terraform/1.16.1:/home/rl/.local/share/mise/installs/zig/0.16.0/bin:/home/rl/.local/share/mise/shims:/home/rl/.asdf/shims:/usr/lib/ccache/bin/:/home/rl/.local/bin:/home/rl/.local/share/../bin:/home/rl/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/rl/go/bin:/home/rl/.cargo/bin:/home/rl/.cargo/bin:/opt/nvim-linux64/bin
+
+
+08:48:16.050 [debug] sent notification server -> client window/logMessage
+
+08:48:16.050 [info] Connected to node nextls-runtime-1790318895041324048@host00
+
+08:48:16.140 [debug] sent notification server -> client window/logMessage
+
+08:48:16.140 [info]      warning: the variable "size" is accessed inside size(...) of a bitstring but it was defined outside of the match. You must precede it with the pin operator
+     │
+ 629 │         <<prefix::binary-size(size), dir_separator, _::binary>>
+     │                               ~
+     │
+     └─ /home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/lib/next_ls-0.23.4/priv/monkey/_next_ls_private_compiler.ex:629:31: :_next_ls_private_formatter.recur_formatter_opts_for_file/2
+
+
+
+08:48:16.379 [debug] sent notification server -> client window/logMessage
+
+08:48:16.379 [info]       warning: the following conditional expression will always succeed:
+
+          is_atom(arg)
+
+      because it evaluates to:
+
+          dynamic(true)
+
+      where "arg" was given the type:
+
+          # type: dynamic(atom())
+          # from: /home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/lib/next_ls-0.23.4/priv/monkey/_next_ls_private_compiler.ex:1266:10
+          is_atom(arg)
+
+      type warning found at:
+      │
+ 1268 │         with true <- is_atom(arg) and Code.ensure_loaded?(arg),
+      │         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      │
+      └─ /home/rl/.local/share/.burrito/next_ls_erts-15.2_0.23.4/lib/next_ls-0.23.4/priv/monkey/_next_ls_private_compiler.ex:1268: :_next_ls_private_spitfire_env.expand/3
+
+
+
+08:48:16.379 [debug] sent notification server -> client $/progress
+
+08:48:16.379 [debug] sent notification server -> client window/logMessage
+
+08:48:16.379 [debug] Runtime for folder mcl-bookclub-phoenix is ready...
+
+08:48:16.381 id=29 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:16.381 [debug] sent notification server -> client $/progress
+
+08:48:16.440 [debug] sent notification server -> client window/logMessage
+
+08:48:16.440 [info] ==> file_system
+
+
+08:48:16.441 [debug] sent notification server -> client window/logMessage
+
+08:48:16.441 [info] Compiling 7 files (.ex)
+
+
+08:48:16.510 [debug] sent notification server -> client window/logMessage
+
+08:48:16.510 [info] Generated file_system app
+
+
+08:48:16.514 id=1031 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:16.518 [debug] sent notification server -> client $/progress
+
+08:48:16.523 [debug] sent notification server -> client window/logMessage
+
+08:48:16.523 [info] ==> bunt
+Compiling 2 files (.ex)
+
+
+08:48:16.640 [debug] sent notification server -> client $/progress
+
+08:48:16.804 [debug] sent notification server -> client window/logMessage
+
+08:48:16.804 [info] Generated bunt app
+
+
+08:48:16.817 [debug] sent notification server -> client window/logMessage
+
+08:48:16.817 [info] ==> jason
+Compiling 10 files (.ex)
+
+
+08:48:17.058 id=157 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:17.059 [debug] sent notification server -> client $/progress
+
+08:48:17.207 [debug] sent notification server -> client $/progress
+
+08:48:17.746 [debug] sent notification server -> client window/logMessage
+
+08:48:17.746 [info] Generated jason app
+
+
+08:48:18.001 [debug] sent notification server -> client window/logMessage
+
+08:48:18.001 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/seshat/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:18.003 [debug] sent notification server -> client window/logMessage
+
+08:48:18.003 [info] ===> Analyzing applications...
+
+
+08:48:18.019 [debug] sent notification server -> client window/logMessage
+
+08:48:18.019 [info] ===> Compiling seshat
+
+
+08:48:18.396 [debug] sent notification server -> client window/logMessage
+
+08:48:18.396 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/ranch/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:18.399 [debug] sent notification server -> client window/logMessage
+
+08:48:18.399 [info] ===> Analyzing applications...
+
+
+08:48:18.419 [debug] sent notification server -> client window/logMessage
+
+08:48:18.420 [info] ===> Compiling ranch
+
+
+08:48:18.587 [debug] sent notification server -> client window/logMessage
+
+08:48:18.587 [info]     ┌─ src/ranch_conns_sup.erl:
+    │
+ 80 │  	catch erlang:send(SupPid, {?MODULE, active_connections, self(), Tag},
+    │  	╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:18.905 [debug] sent notification server -> client window/logMessage
+
+08:48:18.905 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/aten/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:18.908 [debug] sent notification server -> client window/logMessage
+
+08:48:18.908 [info] ===> Analyzing applications...
+
+
+08:48:18.927 [debug] sent notification server -> client window/logMessage
+
+08:48:18.927 [info] ===> Compiling aten
+
+
+08:48:19.460 [debug] sent notification server -> client window/logMessage
+
+08:48:19.460 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/esqlite/_build/prod/plugins/.rebar3/rebar_compiler_erl/source_apps.dag file. Discarding it.
+
+
+
+08:48:19.460 [debug] sent notification server -> client window/logMessage
+
+08:48:19.460 [info] ===> Analyzing applications...
+
+
+08:48:19.474 [debug] sent notification server -> client window/logMessage
+
+08:48:19.474 [info] ===> Compiling pc
+
+
+08:48:19.604 [debug] sent notification server -> client window/logMessage
+
+08:48:19.604 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/esqlite/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:19.604 [debug] sent notification server -> client window/logMessage
+
+08:48:19.604 [info] ===> Analyzing applications...
+
+
+08:48:19.607 [debug] sent notification server -> client window/logMessage
+
+08:48:19.607 [info] ===> Compiling esqlite
+
+
+08:48:19.707 [debug] sent notification server -> client window/logMessage
+
+08:48:19.707 [info] ==> erlex
+Compiling 2 files (.erl)
+
+
+08:48:20.004 [debug] sent notification server -> client window/logMessage
+
+08:48:20.004 [info] Compiling 2 files (.ex)
+
+
+08:48:20.116 [debug] sent notification server -> client window/logMessage
+
+08:48:20.117 [info] Generated erlex app
+
+
+08:48:20.369 [debug] sent notification server -> client window/logMessage
+
+08:48:20.370 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/cowlib/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:20.373 [debug] sent notification server -> client window/logMessage
+
+08:48:20.373 [info] ===> Analyzing applications...
+
+
+08:48:20.450 [debug] sent notification server -> client window/logMessage
+
+08:48:20.450 [info] ===> Compiling cowlib
+
+
+08:48:27.243 [debug] sent notification server -> client window/logMessage
+
+08:48:27.243 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/gproc/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:27.245 [debug] sent notification server -> client window/logMessage
+
+08:48:27.245 [info] ===> Analyzing applications...
+
+
+08:48:27.278 [debug] sent notification server -> client window/logMessage
+
+08:48:27.278 [info] ===> Compiling gproc
+
+
+08:48:28.067 [debug] sent notification server -> client window/logMessage
+
+08:48:28.067 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/telemetry/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:28.070 [debug] sent notification server -> client window/logMessage
+
+08:48:28.071 [info] ===> Analyzing applications...
+
+
+08:48:28.096 [debug] sent notification server -> client window/logMessage
+
+08:48:28.096 [info] ===> Compiling telemetry
+
+
+08:48:28.534 [debug] sent notification server -> client window/logMessage
+
+08:48:28.534 [info] [macula] All NIFs ready.
+
+
+08:48:28.546 [debug] sent notification server -> client window/logMessage
+
+08:48:28.546 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/macula/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:28.550 [debug] sent notification server -> client window/logMessage
+
+08:48:28.550 [info] ===> Analyzing applications...
+
+
+08:48:28.656 [debug] sent notification server -> client window/logMessage
+
+08:48:28.656 [info] ===> Compiling macula
+
+
+08:48:29.737 [debug] sent notification server -> client window/logMessage
+
+08:48:29.737 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/reckon_gater/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:29.741 [debug] sent notification server -> client window/logMessage
+
+08:48:29.741 [info] ===> Analyzing applications...
+
+
+08:48:29.778 [debug] sent notification server -> client window/logMessage
+
+08:48:29.778 [info] ===> Compiling reckon_gater
+
+
+08:48:30.258 [debug] sent notification server -> client window/logMessage
+
+08:48:30.258 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/evoq/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:30.262 [debug] sent notification server -> client window/logMessage
+
+08:48:30.262 [info] ===> Analyzing applications...
+
+
+08:48:30.309 [debug] sent notification server -> client window/logMessage
+
+08:48:30.309 [info] ===> Compiling evoq
+
+
+08:48:30.979 [debug] sent notification server -> client window/logMessage
+
+08:48:30.979 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/reckon_evoq/_build/prod/plugins/.rebar3/rebar_compiler_erl/source_apps.dag file. Discarding it.
+
+
+
+08:48:30.979 [debug] sent notification server -> client window/logMessage
+
+08:48:30.979 [info] ===> Analyzing applications...
+
+
+08:48:31.048 [debug] sent notification server -> client window/logMessage
+
+08:48:31.048 [info] ===> Compiling verl
+
+
+08:48:31.182 [debug] sent notification server -> client window/logMessage
+
+08:48:31.182 [info] ===> Compiling hex_core
+
+
+08:48:31.755 [debug] sent notification server -> client window/logMessage
+
+08:48:31.755 [info] ===> Compiling rebar3_hex
+
+
+08:48:31.918 [debug] sent notification server -> client window/logMessage
+
+08:48:31.919 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/reckon_evoq/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:31.919 [debug] sent notification server -> client window/logMessage
+
+08:48:31.919 [info] ===> Analyzing applications...
+
+
+08:48:31.925 [debug] sent notification server -> client window/logMessage
+
+08:48:31.925 [info] ===> Compiling reckon_evoq
+
+
+08:48:32.270 [debug] sent notification server -> client window/logMessage
+
+08:48:32.271 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/gen_batch_server/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:32.274 [debug] sent notification server -> client window/logMessage
+
+08:48:32.274 [info] ===> Analyzing applications...
+
+
+08:48:32.296 [debug] sent notification server -> client window/logMessage
+
+08:48:32.296 [info] ===> Compiling gen_batch_server
+
+
+08:48:32.496 [debug] sent notification server -> client window/logMessage
+
+08:48:32.496 [info] src/gen_batch_server.erl:269: Warning: INFO: receive matches any message, this is always fast
+src/gen_batch_server.erl:323: Warning: INFO: receive matches any message, this is always fast
+     ┌─ src/gen_batch_server.erl:
+     │
+ 151 │      case catch Mod:init(Args) of
+     │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 197 │      catch global:send(Name, cast_msg(Request)),
+     │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 200 │      catch Mod:send(Name, cast_msg(Request)),
+     │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 219 │      catch global:send(Name, cast_batch_msg(Batch)),
+     │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 222 │      catch Mod:send(Name, cast_batch_msg(Batch)),
+     │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 249 │      case catch gen:call(Name, '$gen_call', Request, Timeout) of
+     │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 346 │      catch Mod:terminate(Reason, Inner),
+     │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 367 │      case catch Mod:handle_batch(Batch, Inner0) of
+     │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 413 │      case catch Mod:handle_continue(Continue, Inner0) of
+     │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/gen_batch_server.erl:
+     │
+ 463 │       case catch Mod:format_status(State) of
+     │            ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:32.780 [debug] sent notification server -> client window/logMessage
+
+08:48:32.780 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/cowboy/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:32.784 [debug] sent notification server -> client window/logMessage
+
+08:48:32.784 [info] ===> Analyzing applications...
+
+
+08:48:32.828 [debug] sent notification server -> client window/logMessage
+
+08:48:32.828 [info] ===> Compiling cowboy
+
+
+08:48:33.217 [debug] sent notification server -> client window/logMessage
+
+08:48:33.217 [info]      ┌─ src/cowboy_http2.erl:
+     │
+ 605 │  		send_headers(State0, StreamID, fin, StatusCode0, RespHeaders0)
+     │  		                                                 ╰── Warning: variable 'RespHeaders0' exported from tuple (line 595, column 9).
+Exporting bindings from subexpressions other than block expressions is
+deprecated and may yield an error in a future version of Erlang/OTP.
+Please move the binding of 'RespHeaders0' out of the tuple.
+Compile directive 'nowarn_export_var_subexpr' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:33.363 [debug] sent notification server -> client window/logMessage
+
+08:48:33.363 [info] ==> phoenix_pubsub
+Compiling 12 files (.ex)
+
+
+08:48:33.399 id=28 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:33.399 [debug] sent notification server -> client $/progress
+
+08:48:33.525 [debug] sent notification server -> client $/progress
+
+08:48:33.555 [debug] sent notification server -> client window/logMessage
+
+08:48:33.555 [info] Generated phoenix_pubsub app
+
+
+08:48:33.809 [debug] sent notification server -> client window/logMessage
+
+08:48:33.809 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/ra/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:33.813 [debug] sent notification server -> client window/logMessage
+
+08:48:33.814 [info] ===> Analyzing applications...
+
+
+08:48:33.882 [debug] sent notification server -> client window/logMessage
+
+08:48:33.883 [info] ===> Compiling ra
+
+
+08:48:34.118 [debug] sent notification server -> client window/logMessage
+
+08:48:34.118 [info]      ┌─ src/ra_snapshot.erl:
+     │
+ 218 │              ?INFO("ra_snapshot: ~ts: skipping ~s as did not validate. Err: ~w",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_snapshot.erl:
+     │
+ 269 │              ?INFO("ra_snapshot: ~ts: removing checkpoint ~s as it did not "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_snapshot.erl:
+     │
+ 299 │              ?INFO("ra_snapshot: ~ts: removing checkpoint ~s as metadata could "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_snapshot.erl:
+     │
+ 309 │           ?INFO("ra_snapshot: ~ts: removing checkpoint ~s as it was older than "
+     │            ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.138 [debug] sent notification server -> client window/logMessage
+
+08:48:34.139 [info]     ┌─ src/ra_system_sup.erl:
+    │
+ 29 │              ?DEBUG("ra system '~s' starting", [Name]),
+    │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_system_sup.erl:
+    │
+ 45 │              ?ERR("Failed to create Ra data directory at '~ts', file system operation error: ~p", [DataDir, Code]),
+    │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.143 [debug] sent notification server -> client window/logMessage
+
+08:48:34.143 [info]     ┌─ src/ra_file.erl:
+    │
+ 34 │      ?RETRY_ON_ERROR(file:sync(Fd)).
+    │                                  ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_file.erl:
+    │
+ 34 │      ?RETRY_ON_ERROR(file:sync(Fd)).
+    │                                  ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_file.erl:
+    │
+ 37 │      ?RETRY_ON_ERROR(prim_file:rename(Src, Dst)).
+    │                                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_file.erl:
+    │
+ 37 │      ?RETRY_ON_ERROR(prim_file:rename(Src, Dst)).
+    │                                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.148 [debug] sent notification server -> client window/logMessage
+
+08:48:34.148 [info]      ┌─ src/ra_monitors.erl:
+     │
+ 115 │      ?DEBUG("ra_monitors: target ~w not recognised", [Target]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.153 [debug] sent notification server -> client window/logMessage
+
+08:48:34.153 [info]     ┌─ src/ra_systems_sup.erl:
+    │
+ 31 │      ?INFO("starting Ra system: ~ts in directory: ~ts", [Name, Dir]),
+    │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_systems_sup.erl:
+    │
+ 58 │      _ = (catch supervisor:delete_child(?MODULE, Name)),
+    │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.153 [debug] sent notification server -> client window/logMessage
+
+08:48:34.153 [info]     ┌─ src/ra_system.erl:
+    │
+ 71 │      ?INFO("ra: starting system ~ts", [Name]),
+    │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_system.erl:
+    │
+ 72 │      ?DEBUG("ra: starting system ~ts with config: ~tp", [Name, Config]),
+    │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.154 [debug] sent notification server -> client window/logMessage
+
+08:48:34.154 [info]     ┌─ src/ra_log_pre_init.erl:
+    │
+ 42 │      ?INFO("ra system '~ts' running pre init for ~b registered servers",
+    │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_log_pre_init.erl:
+    │
+ 48 │                         ?ERROR("pre_init failed in system ~s for UId ~ts with name ~ts"
+    │                          ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_log_pre_init.erl:
+    │
+ 96 │                                      ?ERROR("pre_init failed to read config file for UId '~ts', Err ~p",
+    │                                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_pre_init.erl:
+     │
+ 101 │                              ?INFO("pre_init UId '~ts' is registered but no data
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_pre_init.erl:
+     │
+ 104 │                              _ = catch ra_directory:unregister_name(System, UId),
+     │                                  ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.161 [debug] sent notification server -> client window/logMessage
+
+08:48:34.161 [info]     ┌─ src/ra_system_recover.erl:
+    │
+ 41 │              ?INFO("~s: ra system '~ts' server recovery strategy ~w,
+    │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_system_recover.erl:
+    │
+ 49 │                           ?WARN("~s: ra:restart_server/2 failed with ~p",
+    │                            ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_system_recover.erl:
+    │
+ 56 │              ?INFO("~s: ra system '~ts' server recovery strategy ~s:~s",
+    │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_system_recover.erl:
+    │
+ 62 │                        ?ERROR("~s: ~s encountered during server recovery ~p. "
+    │                         ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+    ┌─ src/ra_system_recover.erl:
+    │
+ 68 │              ?DEBUG("~s: no server recovery configured", [?MODULE]),
+    │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.173 [debug] sent notification server -> client window/logMessage
+
+08:48:34.173 [info]     ┌─ src/ra_directory.erl:
+    │
+ 92 │              ?WARN("ra server with name ~ts UId ~s replaces prior UId ~s",
+    │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.177 [debug] sent notification server -> client window/logMessage
+
+08:48:34.177 [info]      ┌─ src/ra_server_sup_sup.erl:
+     │
+ 174 │              ?INFO("Deleting server ~w and its data directory.",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 186 │              catch ets:delete(ra_log_metrics, UId),
+     │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 187 │              catch ets:delete(ra_log_snapshot_state, UId),
+     │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 188 │              catch ets:delete(ra_metrics, RaName),
+     │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 189 │              catch ets:delete(ra_state, RaName),
+     │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 190 │              catch ets:delete(ra_open_file_metrics, Pid),
+     │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 191 │              catch ra_counters:delete({RaName, node()}),
+     │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 192 │              catch ra_leaderboard:clear(RaName),
+     │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 204 │                                       ?WARN("ra: delete_server/1 failed to delete directory ~ts. "
+     │                                        ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 221 │               ?DEBUG("ra: terminating child ~w in system ~ts", [Pid, System]),
+     │                ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_sup_sup.erl:
+     │
+ 272 │                      ?ERROR("Ra: failed to start ra server ~ts, err ~s",
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.184 [debug] sent notification server -> client window/logMessage
+
+08:48:34.184 [info]      ┌─ src/ra_log_ets.erl:
+     │
+ 109 │      ?INFO("~s: in system ~s initialising. Mem table opts: ~w",
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_ets.erl:
+     │
+ 134 │      ?INFO("ra_log_ets:handle_call/3 unhandled request ~w", [Request]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_ets.erl:
+     │
+ 151 │              ?DEBUG_IF(Time > 25_000,
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_ets.erl:
+     │
+ 157 │              ?WARN("ra_log_ets: failed to delete ~w ~w ",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_ets.erl:
+     │
+ 171 │                   ?DEBUG_IF(Time > 25_000,
+     │                                    ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_ets.erl:
+     │
+ 177 │                   ?WARN("ra_log_ets: failed to delete ets table ~w with ~w "
+     │                    ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_ets.erl:
+     │
+ 196 │      ?DEBUG("ra_log_ets: terminating with ~p", [Reason]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.186 [debug] sent notification server -> client window/logMessage
+
+08:48:34.186 [info]     ┌─ src/ra_log_meta.erl:
+    │
+ 57 │      ?INFO("ra: meta data store initialised for system ~ts. ~b record(s) recovered",
+    │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_meta.erl:
+     │
+ 109 │      ?DEBUG("ra: meta data store is terminating", []),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.191 [debug] sent notification server -> client window/logMessage
+
+08:48:34.191 [info]      ┌─ src/ra_lib.erl:
+     │
+ 276 │      catch
+     │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_lib.erl:
+     │
+ 342 │      case catch Func() of
+     │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.221 [debug] sent notification server -> client window/logMessage
+
+08:48:34.221 [info]      ┌─ src/ra_log_reader.erl:
+     │
+ 207 │      {Open, SegC, Entries} = (catch segment_sparse_read(State, Indexes, Entries0)),
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.234 [debug] sent notification server -> client window/logMessage
+
+08:48:34.234 [info]      ┌─ src/ra.erl:
+     │
+ 199 │      case catch ra_server_sup_sup:restart_server(System, ServerId, #{}) of
+     │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 222 │      case catch ra_server_sup_sup:restart_server(System, ServerId, AddConfig) of
+     │           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 326 │              ?ERR("start_or_restart_cluster: got an error: ~w", [Err]),
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 440 │                          ?ERR("ra: failed to start a server ~w, error: ~p",
+     │                           ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 448 │                      ?ERR("ra: failed to form a new cluster ~w. "
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 464 │                              ?INFO("ra: started cluster ~ts with ~b servers. "
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 472 │                              ?WARN("ra: failed to form new cluster ~w. "
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 481 │              ?WARN("ra: a member of cluster ~w failed to start within the expected time interval (~w)", [ClusterName, Timeout]),
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 540 │              case catch ra_server_sup_sup:start_server(System, Conf) of
+     │                   ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 696 │              ?ERR("Failed to leave the cluster: request to ~w timed out", [Who]),
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 701 │              ?INFO("We (Ra node ~w) has successfully left the cluster. Terminating.", [ServerId]),
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 735 │              ?ERR("Failed to leave the cluster: request to ~w timed out", [Who]),
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra.erl:
+     │
+ 740 │              ?INFO("Ra node ~w has successfully left the cluster.", [ServerId]),
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.257 [debug] sent notification server -> client window/logMessage
+
+08:48:34.258 [info]      ┌─ src/ra_log_segment_writer.erl:
+     │
+ 154 │                                     ?DEBUG("segment_writer in '~ts': deleting memtable "
+     │                                      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 174 │                       ?ERROR("segment_writer: ~b failures encountered during segment"
+     │                        ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 183 │      ?DEBUG("segment_writer in '~w': completed flush of ~b writers from wal file "
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 218 │                              ?DEBUG("segment_writer in '~w': ~s for ~s took ~bms",
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 234 │                              ?DEBUG("segment_writer in '~w': ~s for ~s took ~bms",
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 322 │              ?DEBUG("segment_writer: skipping segment as directory ~ts does "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 331 │                      ?WARN("segment_writer: skipping segments for ~w as
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 369 │              ?DEBUG("ra_log_segment_writer: unable to send "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 375 │                   _  = catch ra_mt:delete({range, Tid, Range})
+     │                        ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 403 │                      ?WARN("segment_writer: missing index ~b in mem table for uid ~s"
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 408 │                              ?ERROR("segment_writer: uid ~ts is registered, exiting...",
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 412 │                              ?INFO("segment_writer: uid ~ts was not registered, skipping",
+     │                               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 449 │                ?INFO("segment_writer: uid ~s ets table deleted", [UId]),
+     │                 ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 503 │              ?WARN("segment_writer: missing header in segment file ~ts "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 508 │              ?DEBUG("segment_writer: failed to open segment file ~ts "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 514 │              ?WARN("segment_writer: failed to open segment file ~ts "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_segment_writer.erl:
+     │
+ 539 │              ?INFO("segment_writer: upgrading segment file names to "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.439 [debug] sent notification server -> client window/logMessage
+
+08:48:34.439 [info]      ┌─ src/ra_log_wal.erl:
+     │
+ 272 │      ?NOTICE("WAL: ~ts init, mem-tables table name: ~w",
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 321 │      ?DEBUG("wal: terminating with ~W", [Reason, 20]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 381 │               ?DEBUG("wal: recovering ~ts, Mode ~s", [F, Mode]),
+     │                ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 390 │               ?DEBUG("wal: recovered ~ts time taken ~bms - recovered ~b writers",
+     │                ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 399 │      ?DEBUG("wal: recovered ~b writers", [map_size(FinalWriters)]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 510 │              ?DEBUG("WAL: requesting resend from `~w`, "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 522 │      _ = catch Fun(State),
+     │          ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 573 │      ?DEBUG("wal: opening new file ~ts", [Fn]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 608 │                  ?WARN("wal: o_sync write strategy not supported. "
+     │                   ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 653 │              ?INFO("wal: preallocation may not be supported by the file system"
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 843 │                      ?DEBUG("WAL: record failed CRC check. If this is the last record"
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 878 │                      ?DEBUG("WAL: record failed CRC check. If this is the last record"
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log_wal.erl:
+     │
+ 923 │              ?ERROR("WAL: record failed CRC check during recovery. "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.446 [debug] sent notification server -> client window/logMessage
+
+08:48:34.446 [info]      ┌─ src/ra_log.erl:
+     │
+ 292 │                               ?ERROR("~ts: ra_log:init/1 cannot complete as wal process is down.",
+     │                                ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 311 │      ?DEBUG("~ts: ra_log:init recovered last_index_term ~w"
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 386 │              ?DEBUG("~ts: mem table ~s detected appending index ~b, "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 407 │              ?DEBUG("~ts: mem table ~s detected appending index ~b, tx=true "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 649 │                      ?DEBUG("~ts: written event did not find term ~b for index ~b "
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 668 │              ?INFO("~ts: ra_log: written gap detected at ~b expected ~b!",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 672 │              ?DEBUG("~ts: ra_log: written gap detected at ~b but is outside
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 773 │      ?INFO("~ts: old snapshot_written received for index ~b in term ~b
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_log.erl:
+     │
+ 783 │      ?INFO("~ts: ra_log: wal requested resend from ~b",
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_log.erl:
+      │
+ 1097 │      catch ets:delete(ra_log_snapshot_state, UId),
+      │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_log.erl:
+      │
+ 1114 │              ?WARN("ra_log:delete_everything/1 failed to delete "
+      │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_log.erl:
+      │
+ 1182 │              ?DEBUG("~ts: ~b obsolete segments at ~b - remaining: ~b, pivot ~0p",
+      │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_log.erl:
+      │
+ 1254 │              ?WARN("~ts: ra_log: resending from ~b failed with wal_down",
+      │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_log.erl:
+      │
+ 1263 │      ?DEBUG("~ts: ra_log: resending from ~b to ~b",
+      │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_log.erl:
+      │
+ 1292 │              ?DEBUG("~ts: mem table ~s detected whilst staging entries, opening new mem table",
+      │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+
+
+
+08:48:34.718 [debug] sent notification server -> client window/logMessage
+
+08:48:34.718 [info]      ┌─ src/ra_server_proc.erl:
+     │
+ 604 │              ?DEBUG_IF(is_command(Msg), "~ts: postponing ~0P",
+     │                                      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 741 │                                 ?DEBUG("~ts: is not new, setting "
+     │                                  ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 759 │              ?WARN("~ts: leader cast - leader not known. "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 763 │              ?DEBUG("~ts: follower leader cast - redirecting to ~w ",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 789 │      ?DEBUG("~ts: election triggered by ~w", [log_id(State), element(1, From)]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 796 │      ?INFO("~ts: Leader monitor down with ~W, setting election timeout",
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 827 │              ?DEBUG("~ts: Leader node ~w may be down, setting pre-vote timeout",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 837 │              ?DEBUG("~ts: Leader node ~w is back up, cancelling pre-vote timeout",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 942 │      ?DEBUG("~ts: terminating leader received ~W", [LogName, Msg, 10]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 956 │              ?DEBUG("~ts: is not fully replicated after ~W",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 967 │      ?DEBUG("~ts: terminating follower received ~W", [LogName, Msg, 10]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 972 │                                 ?DEBUG("~ts: terminating follower requested state '~s'"
+     │                                  ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server_proc.erl:
+     │
+ 983 │              ?DEBUG("~ts: is not fully persisted after ~W",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1022 │      ?INFO("~ts: await_condition - Leader monitor down. Entering follower state.",
+      │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1030 │              ?WARN("~ts: await_condition - Leader node ~w might be down."
+      │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1060 │              ?DEBUG_IF(is_command(Msg), "~ts: await_condition postponing ~0P",
+      │                                      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1072 │      ?WARN("~ts: handle_event unknown ~P", [log_id(State), EventContent, 10]),
+      │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1078 │      ?DEBUG("~ts: terminating with ~w in state ~w",
+      │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1094 │              catch ra_directory:unregister_name(Names, UId),
+      │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1096 │              catch ra_log_meta:delete_sync(MetaName, UId),
+      │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1097 │              catch ra_counters:delete(Id),
+      │              ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1117 │      catch ra_leaderboard:clear(ClusterName),
+      │      ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1126 │      ?DEBUG("~ts: terminating with ~w in state ~w",
+      │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ 1131 │      ?DEBUG("Terminating with ~w in state ~w with state ~w",
+      │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+      ┌─ src/ra_server_proc.erl:
+      │
+ (truncated)
+
+08:48:35.141 [debug] sent notification server -> client window/logMessage
+
+08:48:35.141 [info]      ┌─ src/ra_server.erl:
+     │
+ 431 │      ?DEBUG("~ts: recovering state machine version ~b:~b from index ~b to ~b",
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 446 │      ?DEBUG("~ts: recovery of state machine version ~b:~b "
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 453 │      ?DEBUG("~ts: scanning for cluster changes ~b:~b ", [LogId, FromScan, ToScan]),
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 474 │              ?WARN("~ts: saw append_entries_reply from unknown peer ~w",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 496 │                      ?INFO("~ts: leader not in new cluster - goodbye", [LogId]),
+     │                       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 511 │              ?WARN("~ts: saw append_entries_reply from unknown peer ~w",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 515 │              ?NOTICE("~ts: leader saw append_entries_reply from ~w for term ~b "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 524 │      ?WARN("~ts: saw append_entries_reply from unknown peer ~w",
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 541 │                            ?DEBUG("~ts: peer ~w last index ~b not found "
+     │                             ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 549 │                            ?DEBUG("~ts: setting last index to ~b, "
+     │                             ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 560 │                            ?WARN("~ts: leader saw peer with last_index [~b in ~b]"
+     │                             ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 575 │                            ?DEBUG("~ts: leader received last_index ~b"
+     │                             ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 610 │              ?WARN("~ts command ~W NOT appended to log. Reason ~w",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 650 │              ?WARN("~ts ~b commands NOT appended to Raft log. Reason: wal_down",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 690 │              ?WARN("~ts: saw install_snapshot_result from unknown peer ~w",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 694 │              ?DEBUG("~ts: leader saw install_snapshot_result from ~w for term ~b"
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 702 │              ?WARN("~ts: saw install_snapshot_result from unknown peer ~w",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 739 │              ?WARN("~ts: saw install_snapshot_rpc from unknown leader ~w",
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 743 │              ?INFO("~ts: leader saw install_snapshot_rpc from ~w for term ~b "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 753 │      ?INFO("~ts: leader saw append_entries_rpc from ~w for term ~b "
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 761 │      ?ERR("~ts: leader saw append_entries_rpc for same term ~b"
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 786 │      ?INFO("~ts: leader saw heartbeat_rpc from ~w for term ~b "
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 803 │      ?ERR("~ts: leader saw heartbeat_rpc for same term ~b"
+     │       ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 825 │              ?NOTICE("~ts leader saw heartbeat_reply from ~w for term ~b "
+     │               ╰── Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+
+     ┌─ src/ra_server.erl:
+     │
+ 835 │              ?WARN("~ts (truncated)
+
+08:48:35.193 [debug] sent notification server -> client window/logMessage
+
+08:48:35.193 [info] ==> dialyxir
+Compiling 70 files (.ex)
+
+
+08:48:35.226 id=156 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:35.227 [debug] sent notification server -> client $/progress
+
+08:48:35.364 [debug] sent notification server -> client window/logMessage
+
+08:48:35.364 [info] Generated dialyxir app
+
+
+08:48:35.482 [debug] sent notification server -> client $/progress
+
+08:48:35.624 [debug] sent notification server -> client window/logMessage
+
+08:48:35.625 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/jsx/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:35.630 [debug] sent notification server -> client window/logMessage
+
+08:48:35.630 [info] ===> Analyzing applications...
+
+
+08:48:35.667 [debug] sent notification server -> client window/logMessage
+
+08:48:35.667 [info] ===> Compiling jsx
+
+
+08:48:36.161 [debug] sent notification server -> client window/logMessage
+
+08:48:36.161 [info] ==> credo
+Compiling 257 files (.ex)
+
+
+08:48:36.213 id=27 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:36.213 [debug] sent notification server -> client $/progress
+
+08:48:37.297 [debug] sent notification server -> client window/logMessage
+
+08:48:37.297 [info] Generated credo app
+
+
+08:48:37.327 [debug] sent notification server -> client window/logMessage
+
+08:48:37.327 [info] ==> horus
+Compiling 3 files (.erl)
+
+
+08:48:37.608 [debug] sent notification server -> client window/logMessage
+
+08:48:37.608 [info] Generated horus app
+
+
+08:48:37.647 [debug] sent notification server -> client window/logMessage
+
+08:48:37.647 [info] ==> khepri
+Compiling 22 files (.erl)
+
+
+08:48:37.673 [debug] sent notification server -> client window/logMessage
+
+08:48:37.673 [info] src/khepri_import_export.erl:225:33: Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+%  225|                             _ = catch abort_write(Module, ModulePriv2),
+%     |                                 ^
+
+
+
+08:48:37.673 [debug] sent notification server -> client window/logMessage
+
+08:48:37.673 [info] src/khepri_import_export.erl:368:23: Warning: 'catch ...' is deprecated; please use 'try ... catch ... end' instead.
+Compile directive 'nowarn_deprecated_catch' can be used to suppress
+warnings in selected modules.
+%  368|                   _ = catch close_read(Module, ModulePriv),
+%     |                       ^
+
+
+
+08:48:37.926 [debug] sent notification server -> client window/logMessage
+
+08:48:37.926 [info] Generated khepri app
+
+
+08:48:38.219 [debug] sent notification server -> client window/logMessage
+
+08:48:38.219 [info] [reckon-db] All NIFs ready.
+
+
+08:48:38.230 [debug] sent notification server -> client window/logMessage
+
+08:48:38.230 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/reckon_db/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:38.236 [debug] sent notification server -> client window/logMessage
+
+08:48:38.236 [info] ===> Analyzing applications...
+
+
+08:48:38.323 [debug] sent notification server -> client window/logMessage
+
+08:48:38.323 [info] ===> Compiling reckon_db
+
+
+08:48:38.887 [debug] sent notification server -> client $/progress
+
+08:48:38.992 [debug] sent notification server -> client window/logMessage
+
+08:48:38.992 [info] ===> Failed to restore /home/rl/work/github.com/macula-services/mcl-bookclub-phoenix/deps/mcl_om/_build/prod/lib/.rebar3/rebar_compiler_erl/source.dag file. Discarding it.
+
+
+
+08:48:38.998 [debug] sent notification server -> client window/logMessage
+
+08:48:38.998 [info] ===> Analyzing applications...
+
+
+08:48:39.038 [debug] sent notification server -> client window/logMessage
+
+08:48:39.038 [info] ===> Compiling mcl_om
+
+
+08:48:39.322 [debug] sent notification server -> client window/logMessage
+
+08:48:39.322 [info] ==> host_bookclub
+Compiling 41 files (.ex)
+
+
+08:48:39.323 id=155 [debug] sent request server -> client window/workDoneProgress/create
+
+08:48:39.323 [debug] sent notification server -> client $/progress
+
+08:48:39.410 [debug] sent notification server -> client window/logMessage
+
+08:48:39.410 [info] Generated host_bookclub app
+
+
+08:48:39.416 [debug] sent notification server -> client window/logMessage
+
+08:48:39.416 [info] ==> project_bookclub
+
+
+08:48:39.416 [debug] sent notification server -> client window/logMessage
+
+08:48:39.416 [info] Compiling 11 files (.ex)
+
+
+08:48:39.447 [debug] sent notification server -> client window/logMessage
+
+08:48:39.448 [info] Generated project_bookclub app
+
+
+08:48:39.453 [debug] sent notification server -> client window/logMessage
+
+08:48:39.453 [info] ==> query_bookclub
+
+
+08:48:39.453 [debug] sent notification server -> client window/logMessage
+
+08:48:39.453 [info] Compiling 7 files (.ex)
+
+
+08:48:39.476 [debug] sent notification server -> client window/logMessage
+
+08:48:39.476 [info] Generated query_bookclub app
+
+
+08:48:39.501 [debug] sent notification server -> client window/logMessage
+
+08:48:39.501 [info] ==> mcl_bookclub_phoenix
+Compiling 8 files (.ex)
+
+
+08:48:39.522 [debug] sent notification server -> client window/logMessage
+
+08:48:39.522 [info] Generated mcl_bookclub_phoenix app
+
+
+08:48:39.526 [debug] sent notification server -> client $/progress
+
+08:48:39.526 [debug] sent notification server -> client window/logMessage
+
+08:48:39.527 [info] Compiled mcl-bookclub-phoenix!
+
+08:48:39.699 [debug] sent notification server -> client window/logMessage
+
+08:48:39.699 [info] [extension] Credo finished running in 152ms
+
+08:48:40.186 [debug] sent notification server -> client $/progress

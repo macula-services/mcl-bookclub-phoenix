@@ -19,15 +19,24 @@ defmodule HostBookclub.InitiateBookclub.BookclubInitiatedV1 do
   def new(%{club_id: club_id, name: name, initiated_by: by})
       when is_binary(club_id) and is_binary(name) and is_binary(by) do
     {:ok,
-     %__MODULE__{club_id: club_id, name: name, initiated_by: by,
-                 initiated_at: System.system_time(:millisecond)}}
+     %__MODULE__{
+       club_id: club_id,
+       name: name,
+       initiated_by: by,
+       initiated_at: System.system_time(:millisecond)
+     }}
   end
 
   def new(_), do: {:error, :missing_required_fields}
 
   @impl true
   def to_map(%__MODULE__{} = event) do
-    %{event_type: event_type(), club_id: event.club_id, name: event.name,
-      initiated_by: event.initiated_by, initiated_at: event.initiated_at}
+    %{
+      event_type: event_type(),
+      club_id: event.club_id,
+      name: event.name,
+      initiated_by: event.initiated_by,
+      initiated_at: event.initiated_at
+    }
   end
 end

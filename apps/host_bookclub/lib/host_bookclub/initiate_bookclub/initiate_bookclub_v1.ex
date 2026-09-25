@@ -42,8 +42,12 @@ defmodule HostBookclub.InitiateBookclub.InitiateBookclubV1 do
 
   @impl true
   def to_map(%__MODULE__{} = cmd) do
-    %{command_type: command_type(), club_id: cmd.club_id, name: cmd.name,
-      initiated_by: cmd.initiated_by}
+    %{
+      command_type: command_type(),
+      club_id: cmd.club_id,
+      name: cmd.name,
+      initiated_by: cmd.initiated_by
+    }
   end
 
   @impl true

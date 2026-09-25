@@ -4,10 +4,12 @@ defmodule HostBookclub.BookclubState do
   # The state module is the only module that sees the struct. It remembers
   # the birth details (name, initiated_by, initiated_at), so later events
   # can echo them -- the same self-contained-fact discipline as the Erlang
-  # bookclub.
+  # bookclub. It also keeps the party tally, so the planned event can
+  # carry the club's NEW count as an absolute assignment, never a
+  # relative "+1" a consumer would have to apply.
   @moduledoc false
 
-  defstruct [:club_id, :name, :initiated_by, :initiated_at, status: 0]
+  defstruct [:club_id, :name, :initiated_by, :initiated_at, parties_planned: 0, status: 0]
 
   alias HostBookclub.BookclubStatus
 
@@ -20,10 +22,23 @@ defmodule HostBookclub.BookclubState do
   def apply_event(state, %{event_type: "bookclub_initiated_v1"} = event) do
     data = event_data(event)
 
-    %{state | name: data["name"] || data[:name],
-              initiated_by: data["initiated_by"] || data[:initiated_by],
-              initiated_at: data["initiated_at"] || data[:initiated_at] || 0,
-              status: :evoq_bit_flags.set(state.status, BookclubStatus.initiated())}
+    %{
+      state
+      | name: data["name"] || data[:name],
+        initiated_by: data["initiated_by"] || data[:initiated_by],
+        initiated_at: data["initiated_at"] || data[:initiated_at] || 0,
+        status: :evoq_bit_flags.set(state.status, BookclubStatus.initiated())
+    }
+  end
+
+  def apply_event(state, %{event_type: "bookclub_archived_v1"}) do
+    %{state | status: :evoq_bit_flags.set(state.status, BookclubStatus.archived())}
+  end
+
+  def apply_event(state, %{event_type: "party_planned_v1"} = event) do
+    data = event_data(event)
+
+    %{state | parties_planned: data["parties_planned"] || data[:parties_planned] || 0}
   end
 
   def apply_event(state, _event), do: state

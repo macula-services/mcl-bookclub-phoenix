@@ -1,0 +1,50 @@
+<main>
+  <header>
+    <h1>mcl-bookclub — Admin</h1>
+    <p>LAN-facing operator UI. Every task dispatches the same command the
+       domain allows; nothing here can do what the aggregate refuses.</p>
+  </header>
+
+  <p :if={Phoenix.Flash.get(@flash, :info)} class="flash ok" phx-click="lv:clear-flash" phx-value-key="info">
+    {Phoenix.Flash.get(@flash, :info)}
+  </p>
+  <p :if={Phoenix.Flash.get(@flash, :error)} class="flash err" phx-click="lv:clear-flash" phx-value-key="error">
+    {Phoenix.Flash.get(@flash, :error)}
+  </p>
+
+  <section class="task lookup">
+    <h2>Look up by id</h2>
+    <form phx-submit="lookup" class="lookup-row">
+      <select name="kind">
+        <option :for={{value, label} <- @lookup_kinds} value={value}>{label}</option>
+      </select>
+      <input type="text" name="_id" placeholder="id" />
+      <button type="submit">Get</button>
+    </form>
+    <pre :if={@lookup_text} class="lookup-result">{@lookup_text}</pre>
+    <p class="hint">Ids are minted by the tasks below; the feed echoes them back.</p>
+  </section>
+
+  <section :for={task <- @tasks} class="task">
+    <h2>{task.label}</h2>
+    <form phx-submit="run">
+      <input type="hidden" name="task" value={task.id} />
+      <label :for={{key, label, default} <- task.fields}>
+        {label}
+        <input type="text" name={Atom.to_string(key)} value={default} />
+      </label>
+      <button type="submit">Run</button>
+    </form>
+  </section>
+
+  <section class="feed">
+    <h2>Live feed</h2>
+    <p class="hint">Task outcomes and every projected write, as the pubsub
+       seam delivers them — no reload needed.</p>
+    <ul>
+      <li :for={entry <- @feed}>
+        <span class="at">{entry.at}</span> {entry.text}
+      </li>
+    </ul>
+  </section>
+</main>

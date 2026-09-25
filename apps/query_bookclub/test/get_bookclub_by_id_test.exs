@@ -3,7 +3,6 @@ defmodule QueryBookclub.GetBookclubByIdTest do
   # stands in for the PRJ division having run.
   use ExUnit.Case
 
-  alias QueryBookclub.BookclubQueryStore
   alias QueryBookclub.GetBookclubById.GetBookclubById
 
   setup do
@@ -32,7 +31,12 @@ defmodule QueryBookclub.GetBookclubByIdTest do
     club_id = "bookclub-#{String.duplicate("a", 32)}"
 
     :esqlite3.q(conn, "INSERT INTO clubs VALUES (?, ?, 'active', ?, ?, ?, ?)", [
-      club_id, "The Crooked Shelf", "raf", 42, "evt-1", 0
+      club_id,
+      "The Crooked Shelf",
+      "raf",
+      42,
+      "evt-1",
+      0
     ])
 
     assert {:ok, club} = GetBookclubById.find(club_id)
