@@ -28,7 +28,9 @@ defmodule HostBookclub.MixProject do
   defp deps do
     [
       {:evoq, "~> 1.24"},
-      {:reckon_evoq, "~> 2.7"},
+      # 2.7.2 at least: 2.7.0 read snapshots back empty, so an aggregate
+      # reloaded past a snapshot rebuilt from nothing.
+      {:reckon_evoq, "~> 2.7 and >= 2.7.2"},
       {:reckon_gater, "~> 3.11"}
     ]
   end
