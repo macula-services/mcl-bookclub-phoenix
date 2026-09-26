@@ -34,8 +34,11 @@ defmodule MclBookclubPhoenix.MixProject do
       # co-org providers across serving stations (a station's registry holds
       # one advertiser per procedure) -- a build on 0.28 would name the same
       # serving station as the Erlang twin and be un-dialable (mcl-om#5).
-      {:mcl_om, "~> 0.29"},
-      {:macula, "~> 12.2"},
+      # 0.31: each capability registers on its serving station only, and macula
+      # 12.7.0's pool renews an advertised chain before its 30-minute
+      # delegation lapses (macula#38, D32).
+      {:mcl_om, "~> 0.31"},
+      {:macula, "~> 12.7"},
       {:evoq, "~> 1.24"},
       {:host_bookclub, in_umbrella: true},
       {:project_bookclub, in_umbrella: true},
