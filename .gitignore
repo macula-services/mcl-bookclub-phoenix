@@ -9,3 +9,6 @@ mcl_bookclub_phoenix-*.tar
 /priv/plts/
 mix.lock
 /apps/mcl_bookclub_phoenix_web/priv/static/assets/
+
+# next-ls editor state and logs (one log was tracked; untracked now)
+.elixir-tools/
