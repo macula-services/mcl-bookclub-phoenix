@@ -7,5 +7,9 @@
   # then cannot see macula's functions or the callbacks of its behaviours.
   # Calls into macula are untyped from here; nothing else is hidden.
   ~r/Callback info about the :macula_response behaviour is not available/,
-  ~r/Function :macula(_topic)?\.[a-z_]+\/\d+ does not exist/
+  ~r/Function :macula(_topic)?\.[a-z_]+\/\d+ does not exist/,
+  # reckon_db is excluded from the PLT for the same reason, so the store
+  # wiring's calls into reckon_db_sup (start the store, list it) and its
+  # health probe into reckon_db_store are untyped from here.
+  ~r/Function :reckon_db_(sup|store)\.[a-z_]+\/\d+ does not exist/
 ]

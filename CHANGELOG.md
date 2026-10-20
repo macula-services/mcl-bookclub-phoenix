@@ -44,6 +44,22 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Changed
 
+- **Wire 1.0: `mcl_om` 1.2 and macula 15.6, the line the fleet runs since
+  the flag day (2026-10-19).** A wire 1.0 node neither reads a 14 node's
+  frames nor completes a handshake with it, so this is taken on purpose: the
+  `~> 0.x` floor could not float here on its own (mcl-om#27). No call site
+  changed.
+- **The facade opens its own reckon-db store before it boots the service.**
+  `mcl_om` opens no store since 0.35.0 (mcl-om#10): a service module
+  exporting `store_id/0` and `data_dir/0` no longer gets one, and only a
+  warning at boot names the callbacks. `MclBookclubPhoenix.Application.start/2`
+  now opens the store first (`MclBookclubPhoenix.EventStore`), waits until
+  reckon-db lists it, and starts the per-store evoq subscription; the store's
+  id, directory, indexes, mode and integrity live in
+  `MclBookclubPhoenix.Service.event_store/0`, and the app declares
+  `reckon_db`, `evoq` and `reckon_evoq` itself. Without this the bump
+  compiles clean, boots green and has no store at all, losing every command
+  and projection at its first touch.
 - The readable status strings now live with their flags: each status
   module owns a flag map and `to_string/1` (rendered through
   `evoq_bit_flags:to_string/2`), and the projections take each status

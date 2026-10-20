@@ -4,7 +4,7 @@ defmodule MclBookclubPhoenixUmbrella.MixProject do
   def project do
     [
       apps_path: "apps",
-      version: "0.1.1",
+      version: "0.2.0",
       start_permanent: Mix.env() == :prod,
       elixirc_options: elixirc_options(),
       deps: deps(),
@@ -25,7 +25,8 @@ defmodule MclBookclubPhoenixUmbrella.MixProject do
         # the whiteboard found this the hard way when its web app's
         # Endpoint never started inside the built container. Listed in
         # boot order: the departments, then the service (whose
-        # mcl_om:boot/1 opens the store), then the web app.
+        # application opens the store before mcl_om:boot/1), then the web
+        # app.
         applications: [
           host_bookclub: :permanent,
           project_bookclub: :permanent,

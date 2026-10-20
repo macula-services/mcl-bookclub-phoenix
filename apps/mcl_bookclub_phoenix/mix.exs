@@ -29,20 +29,29 @@ defmodule MclBookclubPhoenix.MixProject do
   # the supervisor starts :evoq_event_handler children.
   defp deps do
     [
-      # The 0.29 floor is deliberate: this service is one of several
-      # providers of org procedure mcl-bookclub/*, and 0.29 is what spreads
-      # co-org providers across serving stations (a station's registry holds
-      # one advertiser per procedure) -- a build on 0.28 would name the same
-      # serving station as the Erlang twin and be un-dialable (mcl-om#5).
-      # 0.31: each capability registers on its serving station only, and macula
-      # 12.7.0's pool renews an advertised chain before its 30-minute
-      # delegation lapses (macula#38, D32).
-      {:mcl_om, "~> 0.31"},
-      {:macula, "~> 12.7"},
-      {:evoq, "~> 1.24"},
+      # 1.0 is the macula-15 line, wire 1.0, the fleet's since the flag day
+      # (2026-10-19). The major moves with the wire so no ~> 0.x service
+      # floats onto macula 15 by itself (mcl-om#27); a 1.0 node neither reads
+      # a 14 node's frames nor handshakes with it, so this is taken on
+      # purpose, as every other service took it.
+      {:mcl_om, "~> 1.2"},
+      {:macula, "~> 15.6"},
+      # THIS SERVICE'S OWN EVENT STORE. mcl_om opens no store and starts no
+      # reckon-db or evoq application since 0.35.0 (mcl-om#10): the three
+      # persistence apps are this app's own deps, and
+      # MclBookclubPhoenix.Application opens the store in start/2 before
+      # mcl_om:boot/1. Leaving them out compiles clean and boots with no
+      # store at all.
+      {:reckon_db, "~> 5.11"},
+      {:evoq, "~> 1.27"},
+      {:reckon_evoq, "~> 2.8"},
       {:host_bookclub, in_umbrella: true},
       {:project_bookclub, in_umbrella: true},
-      {:query_bookclub, in_umbrella: true}
+      {:query_bookclub, in_umbrella: true},
+      # The start-up ordering test replaces :mcl_om.boot/1 and the service's
+      # event_store/0 for one call, so it can prove the store is open when
+      # boot runs. Everything else passes through.
+      {:meck, "~> 1.2", only: :test}
     ]
   end
 end

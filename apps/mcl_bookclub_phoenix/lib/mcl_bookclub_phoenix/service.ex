@@ -85,16 +85,37 @@ defmodule MclBookclubPhoenix.Service do
     }
   end
 
-  # The store the service owns -- the same two callbacks, in Elixir, that
-  # make mcl_om:boot/1 open the store and its subscription. The path is a
-  # CHARLIST, not a binary: the dets/ra layer under reckon-db rejects a
-  # binary file option with {badarg, ...} (the whiteboard's runtime.exs
-  # documents the same trap).
-  @impl true
-  def store_id, do: :mcl_bookclub_store
+  # THE STORE THIS SERVICE OWNS, described here and opened by
+  # MclBookclubPhoenix.Application in start/2 before mcl_om:boot/1.
+  #
+  # ⚠ NOT store_id/0 AND data_dir/0. That pair was the pre-0.35 contract, when
+  # mcl_om:boot/1 opened a store a service exported the two for. It opens none
+  # since 0.35.0 (mcl-om#10) and only logs a warning naming them, so a service
+  # that still carries the pair compiles clean, boots green and has NO store:
+  # every command and projection is lost at its first touch.
+  #
+  # The directory is a CHARLIST, not a binary: the dets/ra layer under
+  # reckon-db rejects a binary file option with {badarg, ...} (the whiteboard's
+  # runtime.exs documents the same trap).
+  @doc """
+  The reckon-db store this service owns.
 
-  @impl true
-  def data_dir do
+  The id is named twice, here and as `store_id` in the evoq block of
+  `config/runtime.exs`; a test compares them. The directory is `MCL_DATA_DIR`,
+  a mounted volume on a box.
+  """
+  @spec event_store() :: map()
+  def event_store do
+    %{
+      id: :mcl_bookclub_store,
+      dir: data_dir(),
+      indexes: [],
+      mode: :single,
+      integrity: :disabled
+    }
+  end
+
+  defp data_dir do
     dir =
       case System.get_env("MCL_DATA_DIR") do
         nil -> "/tmp/mcl_bookclub"

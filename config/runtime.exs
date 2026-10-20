@@ -41,8 +41,13 @@ config :mcl_om,
 config :macula,
   crypto_profile: :pq_hybrid
 
-# MANDATORY because the service exports store_id/0: mcl_om:boot/1 starts
-# the store and its subscription, which crash without the adapter block.
+# MANDATORY because this service owns a store: MclBookclubPhoenix.EventStore
+# starts the per-store evoq subscription, and that subscription reads the
+# global log through evoq, which crashes on {not_configured,
+# event_store_adapter} without this block. evoq starts as a release-boot
+# application before any service's start/2 runs, so nothing can inject it
+# later. The store id here and MclBookclubPhoenix.Service.event_store/0's id
+# must agree; a test compares them.
 config :evoq,
   event_store_adapter: :reckon_evoq_adapter,
   subscription_adapter: :reckon_evoq_adapter,

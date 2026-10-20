@@ -25,14 +25,21 @@ defmodule MclBookclubPhoenix.ServiceTest do
     assert name == "mcl-bookclub"
   end
 
-  test "the store callbacks are exported, together" do
-    assert function_exported?(Service, :store_id, 0)
-    assert function_exported?(Service, :data_dir, 0)
-    assert is_atom(Service.store_id())
+  test "the service describes its store, and not through the callbacks mcl_om dropped" do
+    # event_store/0 is what MclBookclubPhoenix.Application opens in start/2
+    # before mcl_om:boot/1. store_id/0 + data_dir/0 were the pre-0.35 shape
+    # mcl_om opens nothing for (mcl-om#10) and warns about at every boot.
+    assert %{id: id, dir: dir, indexes: [], mode: :single, integrity: :disabled} =
+             Service.event_store()
+
+    assert is_atom(id)
 
     # A CHARLIST, not a binary: the dets/ra layer under reckon-db rejects
     # a binary file option with {badarg, ...}.
-    assert is_list(Service.data_dir())
+    assert is_list(dir)
+    refute function_exported?(Service, :store_id, 0)
+    refute function_exported?(Service, :data_dir, 0)
+    assert :mcl_om.leftover_store_callbacks(Service) == []
   end
 
   test "the capability is the Erlang twin's, name for name" do
