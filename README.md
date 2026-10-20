@@ -38,8 +38,9 @@ plan_party policy), every projection (clubs/members/books/readings), every
 query desk, the three mesh emitters, the `get_bookclub_by_id` capability,
 and the LiveView admin console -- task buttons dispatch the divisions'
 entry points, lookups call the query desks, and the projection pubsub seam
-feeds the live feed. Remaining: CI workflows + Containerfile + the fleet
-rollout as the second club.
+feeds the live feed. CI and the image (`.github/workflows/ci.yml`,
+`Containerfile`) are in place; what remains is the fleet rollout as the
+second club.
 
 ## Running it
 
