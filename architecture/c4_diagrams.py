@@ -140,8 +140,8 @@ def context():
            "subscribes to the fact topics"], person=True)
     d.box("b-sys", 365, 186, 270, 152, "mcl-bookclub-phoenix", "[mcl_om mesh service, own box]",
           ["Five umbrella apps: CMD, PRJ, QRY,", "the facade and the web console.",
-           "Serves one procedure on the mesh,", "the LiveView admin on 4000, and",
-           "/health on 8454"])
+           "Serves one procedure of its own on", "the mesh, the LiveView admin on",
+           "4000, and /health on 8454"])
     d.box("b-ext", 40, 400, 270, 120, "Host disk", "[External system]",
           ["The club store and sqlite read", "model under /var/lib, the node",
            "key under /etc/mcl/secrets"])

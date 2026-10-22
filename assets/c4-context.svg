@@ -64,9 +64,9 @@
 <text class="t-type" x="381" y="232">[mcl_om mesh service, own box]</text>
 <text class="t-desc" x="381" y="256">Five umbrella apps: CMD, PRJ, QRY,</text>
 <text class="t-desc" x="381" y="272">the facade and the web console.</text>
-<text class="t-desc" x="381" y="288">Serves one procedure on the mesh,</text>
-<text class="t-desc" x="381" y="304">the LiveView admin on 4000, and</text>
-<text class="t-desc" x="381" y="320">/health on 8454</text>
+<text class="t-desc" x="381" y="288">Serves one procedure of its own on</text>
+<text class="t-desc" x="381" y="304">the mesh, the LiveView admin on</text>
+<text class="t-desc" x="381" y="320">4000, and /health on 8454</text>
 <rect class="b-ext" x="40" y="400" width="270" height="120" rx="10"/>
 <text class="t-name" x="56" y="428">Host disk</text>
 <text class="t-type" x="56" y="446">[External system]</text>
