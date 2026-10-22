@@ -225,9 +225,9 @@ jobs:
       image: ghcr.io/macula-services/mcl-bookclub-phoenix
       digest: ${{ needs.image.outputs.digest }}
 
-  # :latest is the dev fleet's deploy channel, so it moves LAST: only on a v* tag, and only once
-  # attest has signed and attested this digest. A box that pulls :latest in the window between
-  # push and signature would otherwise refuse the release (and remember that for an hour).
+  # The mutable :latest tag moves LAST, so it never names a digest before that digest is signed:
+  # only on a v* tag, and only once attest has signed and attested it. Anything that pulled
+  # :latest in the window between push and signature would otherwise refuse the release.
   promote-latest:
     needs: [image, attest]
     if: startsWith(github.ref, 'refs/tags/v') && needs.image.outputs.digest != ''

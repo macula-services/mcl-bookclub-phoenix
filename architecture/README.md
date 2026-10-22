@@ -6,8 +6,10 @@ made of, without reading it.*
 **Status: the full domain, plus the LiveView admin.** One umbrella of five apps: the
 CMD, PRJ and QRY divisions, the facade that owns the mesh contract and the emitters,
 and a Phoenix web app that presents the divisions through the same entry points the
-mesh uses. One procedure is advertised, `mcl-bookclub/get_bookclub_by_id`; the
-LiveView console runs on 4000; `/health` on 8454.
+mesh uses. `mcl-bookclub/get_bookclub_by_id` is its own procedure, and the only
+one; `mcl-om` adds `mcl-bookclub/info` and `mcl-bookclub/get_limits` to every
+service, both open, and `capabilities/0` is the list. The LiveView console runs on
+4000; `/health` on 8454.
 
 ## Level 1: system context
 
@@ -17,10 +19,10 @@ LiveView console runs on 4000; `/health` on 8454.
 | --- | --- | --- |
 | mcl-bookclub-phoenix | In scope | Five apps in one release. Serves `mcl-bookclub/get_bookclub_by_id` on the mesh, the LiveView admin on 4000, and `/health` on 8454 |
 | Club operator | Person | Runs the club from the LiveView console: initiates and archives clubs, registers and unregisters members, procures and retires books, starts and finishes readings, plans parties |
-| Mesh consumer | Person | Another service or app on the mesh: calls the one advertised procedure and subscribes to the three fact topics |
+| Mesh consumer | Person | Another service or app on the mesh: calls `mcl-bookclub/get_bookclub_by_id` and subscribes to the three fact topics |
 | Host disk | External system | The club store and sqlite read model under `/var/lib/mcl-bookclub`, and the node identity key under `/etc/mcl/secrets` |
 | macula-realm | Macula infrastructure | Endorses the node's identity key and grants the scope `mcl-bookclub`: one action and three fact topics |
-| Macula stations, mesh DHT | Macula infrastructure | The pinned stations are the service's mesh entry points over QUIC; the DHT holds the advertised procedure and carries the fact topics |
+| Macula stations, mesh DHT | Macula infrastructure | The pinned stations are the service's mesh entry points over QUIC; the DHT holds the adverts for its own procedure and for the `info` and `get_limits` mcl-om adds, and carries the fact topics |
 
 Same org, topics and procedure names as the Erlang bookclub, so a peer cannot tell
 the two apart. The three divisions have no Phoenix in their deps: only the web app
@@ -44,7 +46,7 @@ presents, and it dispatches the same desks the mesh and the tests use.
 | `MclBookclubPhoenixWeb.Endpoint` | Phoenix endpoint | `MCL_HTTP_PORT`, `0.0.0.0:4000`; the LiveView socket at `/live`; no other plug reads or writes the club |
 | `MclBookclubPhoenixWeb.Router` | one live route | The browser pipeline, then `/` serves `AdminLive`. Nothing else is routed |
 | `MclBookclubPhoenixWeb.AdminLive` | LiveView, presentation only | Every task button dispatches a `maybe_` desk, every lookup calls a query desk, and the feed arrives over pubsub |
-| `mcl_om` + `macula` | libraries, `~> 1.4` and `~> 16.0` | `boot/1`: node key, realm join, QUIC pool, capability registration, health; publish on a fact topic |
+| `mcl_om` + `macula` | libraries, `~> 1.4` and `~> 16.0` | `boot/1`: node key, realm join, QUIC pool, adverts, health; publish on a fact topic |
 | `reckon_db` + `evoq` | libraries, `~> 5.11` and `~> 1.27` | The event log and the CQRS framework; `reckon_evoq ~> 2.8` is the adapter between them |
 | `esqlite` + `phoenix_pubsub` | libraries, `~> 0.9` and `~> 2.3` | One sqlite file per store, and the registry PRJ broadcasts on and the LiveView subscribes to |
 | `phoenix` + `phoenix_live_view` | libraries, `~> 1.8` and `~> 1.2` | The console; bandit `~> 1.12` serves it, jason `~> 1.4` encodes, esbuild bundles `app.js` |
@@ -77,4 +79,4 @@ The check that keeps them here is the `c4-model` job in
 `.github/workflows/c4-model.yml`. It is red until both files exist and are shown, and it
 stays red if either one goes missing.
 
-**Where the station list comes from.** It is not in `config/sys.config.src`: `mcl_om` reads `MACULA_STATION_SEEDS` and `MACULA_STATION_NODE_IDS` from the environment at boot, paired index for index, so this repository pins no station and the list may be any length.
+**Where the station list comes from.** It is not in `config/runtime.exs`: `mcl_om` reads `MACULA_STATION_SEEDS` and `MACULA_STATION_NODE_IDS` from the environment at boot, paired index for index, so this repository pins no station and the list may be any length.

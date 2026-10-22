@@ -150,8 +150,8 @@ def context():
           ["Endorses the node's identity key", "and grants the scope mcl-bookclub:",
            "one action, three fact topics"])
     d.box("b-mac", 690, 400, 270, 120, "Macula stations, mesh DHT", "[Macula infrastructure]",
-          ["Pinned stations are the mesh entry", "(QUIC); the DHT holds the advertised",
-           "procedure and carries the facts"])
+          ["Pinned stations are the mesh entry", "(QUIC); the DHT holds the",
+           "adverts, and carries the facts"])
     d.edge("M175 150V176H400V186")
     d.text("t-rel", 183, 170, "commands on 4000, and reads")
     d.edge("M825 150V176H620V186")
@@ -160,8 +160,18 @@ def context():
     d.edge("M620 338V368H825V400"); d.text("t-rel", 632, 360, "advertises, publishes 3 facts")
     d.edge("M365 300H340V460H310")
     d.text("t-rel", 330, 340, "keeps the log and the read model", anchor="middle", rotate=-90)
-    d.text("t-desc", 40, 566, "Same org, topics and procedure names as the Erlang bookclub, so a peer cannot tell the two apart. The")
-    d.text("t-desc", 40, 584, "three divisions have no Phoenix in their deps: only the web app presents, and it dispatches the same desks.")
+    d.text(
+        "t-desc",
+        40,
+        566,
+        "Same org, topics and procedure names as the Erlang bookclub, so a peer cannot tell the two apart. The",
+    )
+    d.text(
+        "t-desc",
+        40,
+        584,
+        "three divisions have no Phoenix in their deps: only the web app presents, and it dispatches the same desks.",
+    )
     d.legend(630, boundary=False)
     d.write()
 
@@ -231,7 +241,8 @@ def components():
     # The libraries.
     d.text("t-desc", 32, 916, "The libraries the release links:")
     d.box("b-lib", 32, 930, 300, 136, "mcl_om + macula", "[~> 1.4, ~> 16.0]",
-          ["boot/1: node key, realm join,", "QUIC pool, capability, health;",
+          ["boot/1: node key, realm join;",
+           "QUIC pool, health, adverts;",
            "publish on a fact topic"], code=True)
     d.box("b-lib", 352, 930, 300, 136, "reckon_db + evoq", "[~> 5.11, ~> 1.27]",
           ["the event log and the CQRS", "framework; reckon_evoq ~> 2.8",
