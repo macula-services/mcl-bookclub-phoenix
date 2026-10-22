@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 1420" role="img" aria-label="mcl-bookclub-phoenix components">
+<title>mcl-bookclub-phoenix components</title>
+<style>
+.t-name { font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; }
+.t-desc { font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; font-size: 12.5px; }
+.t-rel { font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; font-size: 11.5px; paint-order: stroke; stroke-width: 4px; stroke-linejoin: round; }
+.t-code { font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; }
+.t-type { font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 11.5px; }
+.t-bound { font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; }
+.t-leg { font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; font-size: 12px; }
+.edge { fill: none; stroke-width: 1.25; }
+.edge-later { fill: none; stroke-width: 1.25; stroke-dasharray: 5 4; }
+.bg { fill: #FFFFFF; }
+.b-sys { fill: #F5E9CC; stroke: #A56F0A; stroke-width: 2; }
+.b-per { fill: #E3EBF2; stroke: #3B5B7A; stroke-width: 1.25; }
+.b-mac { fill: #E6E4EE; stroke: #5E5A78; stroke-width: 1.25; }
+.b-ext { fill: #ECEFED; stroke: #8A9791; stroke-width: 1.25; }
+.b-cmp { fill: #FFFFFF; stroke: #8A9791; stroke-width: 1.25; }
+.b-later { fill: none; stroke: #8A9791; stroke-width: 1.25; stroke-dasharray: 5 4; }
+.bound { fill: none; stroke: #B3BDB8; stroke-width: 1; }
+.head { fill: #3B5B7A; }
+.t-name, .t-code { fill: #16201D; }
+.t-type, .t-bound, .t-leg { fill: #66736E; }
+.t-desc { fill: #34413C; }
+.t-rel { fill: #66736E; stroke: #FFFFFF; }
+.edge, .edge-later { stroke: #8A9791; }
+.arrowhead { fill: #8A9791; }
+@media (prefers-color-scheme: dark) {
+.bg { fill: #171F1C; }
+.b-sys { fill: #3A2E13; stroke: #E3AA3C; }
+.b-per { fill: #1D2A36; stroke: #8EB4D8; }
+.b-mac { fill: #26243A; stroke: #A9A4C8; }
+.b-ext { fill: #1C2421; stroke: #7D8B85; }
+.b-cmp { fill: #171F1C; stroke: #7D8B85; }
+.b-later { stroke: #7D8B85; }
+.bound { stroke: #4A5752; }
+.head { fill: #8EB4D8; }
+.t-name, .t-code { fill: #E6ECE9; }
+.t-type, .t-bound, .t-leg { fill: #93A09A; }
+.t-desc { fill: #C3CDC8; }
+.t-rel { fill: #93A09A; stroke: #171F1C; }
+.edge, .edge-later { stroke: #7D8B85; }
+.arrowhead { fill: #7D8B85; }
+}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0 0L10 5L0 10z"/></marker></defs>
+<rect class="bg" x="0" y="0" width="1340" height="1420"/>
+<rect class="bound" x="16" y="40" width="1292" height="840" rx="12"/>
+<text class="t-bound" x="32" y="62">mcl-bookclub-phoenix [Container] - one umbrella, five apps</text>
+<rect class="b-cmp" x="32" y="76" width="340" height="136" rx="10"/>
+<text class="t-code" x="48" y="104">MclBookclubPhoenix.Application</text>
+<text class="t-type" x="48" y="122">[OTP application]</text>
+<text class="t-desc" x="48" y="146">Opens the store from Service.event_store/0,</text>
+<text class="t-desc" x="48" y="162">then mcl_om:boot/1 with the service module;</text>
+<text class="t-desc" x="48" y="178">a store that cannot open stops the boot</text>
+<rect class="b-sys" x="492" y="76" width="340" height="136" rx="10"/>
+<text class="t-code" x="508" y="104">MclBookclubPhoenix.Service</text>
+<text class="t-type" x="508" y="122">[mcl_om_service behaviour]</text>
+<text class="t-desc" x="508" y="146">The six callbacks plus event_store/0:</text>
+<text class="t-desc" x="508" y="162">info, start, stop, health, capabilities,</text>
+<text class="t-desc" x="508" y="178">identity_spec</text>
+<rect class="b-cmp" x="952" y="76" width="340" height="136" rx="10"/>
+<text class="t-code" x="968" y="104">MclBookclubPhoenix.Supervisor</text>
+<text class="t-type" x="968" y="122">[supervisor, one_for_one]</text>
+<text class="t-desc" x="968" y="146">Three children, the emitters. Started by</text>
+<text class="t-desc" x="968" y="162">Service.start/1, after boot's replay,</text>
+<text class="t-desc" x="968" y="178">which is harmless for :skip handlers</text>
+<rect class="b-cmp" x="32" y="272" width="340" height="136" rx="10"/>
+<text class="t-code" x="48" y="300">MclBookclubPhoenix.EventStore</text>
+<text class="t-type" x="48" y="318">[this service's reckon-db store]</text>
+<text class="t-desc" x="48" y="342">start_store, wait until reckon_db lists it,</text>
+<text class="t-desc" x="48" y="358">then :evoq_store_subscription, the one</text>
+<text class="t-desc" x="48" y="374">subscription that feeds every handler</text>
+<rect class="b-sys" x="492" y="272" width="340" height="136" rx="10"/>
+<text class="t-code" x="508" y="300">MclBookclubPhoenix.GetBookclubByIdHandler</text>
+<text class="t-type" x="508" y="318">[macula_response]</text>
+<text class="t-desc" x="508" y="342">handle_request/2 reads club_id with</text>
+<text class="t-desc" x="508" y="358">mcl_om_wire:field/2 and answers from the</text>
+<text class="t-desc" x="508" y="374">QRY desk; text back as CBOR text</text>
+<rect class="b-cmp" x="952" y="272" width="340" height="136" rx="10"/>
+<text class="t-code" x="968" y="300">EmitMemberRegisteredV1ToMesh</text>
+<text class="t-type" x="968" y="318">[evoq_event_handler, three modules]</text>
+<text class="t-desc" x="968" y="342">with EmitBookProcuredV1ToMesh and</text>
+<text class="t-desc" x="968" y="358">EmitBookRetiredV1ToMesh: replay_policy</text>
+<text class="t-desc" x="968" y="374">:skip, publish through Facts and :macula</text>
+<rect class="b-cmp" x="32" y="468" width="340" height="180" rx="10"/>
+<text class="t-code" x="48" y="496">project_bookclub</text>
+<text class="t-type" x="48" y="514">[PRJ division]</text>
+<text class="t-desc" x="48" y="538">Starts the pubsub registry, the read-model</text>
+<text class="t-desc" x="48" y="554">store and eight projections; one</text>
+<text class="t-desc" x="48" y="570">INSERT OR REPLACE per event, and a</text>
+<text class="t-desc" x="48" y="586">broadcast on PubSub after each write.</text>
+<text class="t-desc" x="48" y="602">No Phoenix in its deps: just the pubsub lib</text>
+<rect class="b-cmp" x="492" y="468" width="340" height="180" rx="10"/>
+<text class="t-code" x="508" y="496">host_bookclub</text>
+<text class="t-type" x="508" y="514">[CMD division]</text>
+<text class="t-desc" x="508" y="538">Nine desks, four aggregates, the</text>
+<text class="t-desc" x="508" y="554">on_member_registered policy; commands</text>
+<text class="t-desc" x="508" y="570">dispatch through evoq to the store.</text>
+<text class="t-desc" x="508" y="586">NO mesh SDK in its deps, which is why</text>
+<text class="t-desc" x="508" y="602">the emitters live in the facade</text>
+<rect class="b-cmp" x="952" y="468" width="340" height="180" rx="10"/>
+<text class="t-code" x="968" y="496">query_bookclub</text>
+<text class="t-type" x="968" y="514">[QRY division]</text>
+<text class="t-desc" x="968" y="538">BookclubQueryStore: one GenServer, q/2</text>
+<text class="t-desc" x="968" y="554">only, so a query module cannot write.</text>
+<text class="t-desc" x="968" y="570">Five pure query modules answer with</text>
+<text class="t-desc" x="968" y="586">maps. NO evoq, NO mesh, NO Phoenix in</text>
+<text class="t-desc" x="968" y="602">its deps</text>
+<text class="t-desc" x="32" y="700">mcl_bookclub_phoenix_web - presentation only:</text>
+<rect class="b-cmp" x="32" y="708" width="340" height="136" rx="10"/>
+<text class="t-code" x="48" y="736">MclBookclubPhoenixWeb.Endpoint</text>
+<text class="t-type" x="48" y="754">[Phoenix endpoint]</text>
+<text class="t-desc" x="48" y="778">MCL_HTTP_PORT, 0.0.0.0:4000; the LiveView</text>
+<text class="t-desc" x="48" y="794">socket at /live; no other plug reads or</text>
+<text class="t-desc" x="48" y="810">writes the club</text>
+<rect class="b-cmp" x="492" y="708" width="340" height="136" rx="10"/>
+<text class="t-code" x="508" y="736">MclBookclubPhoenixWeb.Router</text>
+<text class="t-type" x="508" y="754">[one live route]</text>
+<text class="t-desc" x="508" y="778">the browser pipeline, then / serves</text>
+<text class="t-desc" x="508" y="794">MclBookclubPhoenixWeb.AdminLive; nothing</text>
+<text class="t-desc" x="508" y="810">else is routed</text>
+<rect class="b-cmp" x="952" y="708" width="340" height="136" rx="10"/>
+<text class="t-code" x="968" y="736">MclBookclubPhoenixWeb.AdminLive</text>
+<text class="t-type" x="968" y="754">[LiveView, presentation only]</text>
+<text class="t-desc" x="968" y="778">Every task button dispatches a maybe_</text>
+<text class="t-desc" x="968" y="794">desk, every lookup calls a query desk,</text>
+<text class="t-desc" x="968" y="810">and the feed arrives over pubsub</text>
+<text class="t-desc" x="32" y="916">The libraries the release links:</text>
+<rect class="b-mac" x="32" y="930" width="300" height="136" rx="10"/>
+<text class="t-code" x="48" y="958">mcl_om + macula</text>
+<text class="t-type" x="48" y="976">[~&gt; 1.4, ~&gt; 16.0]</text>
+<text class="t-desc" x="48" y="1000">boot/1: node key, realm join,</text>
+<text class="t-desc" x="48" y="1016">QUIC pool, capability, health;</text>
+<text class="t-desc" x="48" y="1032">publish on a fact topic</text>
+<rect class="b-mac" x="352" y="930" width="300" height="136" rx="10"/>
+<text class="t-code" x="368" y="958">reckon_db + evoq</text>
+<text class="t-type" x="368" y="976">[~&gt; 5.11, ~&gt; 1.27]</text>
+<text class="t-desc" x="368" y="1000">the event log and the CQRS</text>
+<text class="t-desc" x="368" y="1016">framework; reckon_evoq ~&gt; 2.8</text>
+<text class="t-desc" x="368" y="1032">is the adapter between them</text>
+<rect class="b-mac" x="672" y="930" width="300" height="136" rx="10"/>
+<text class="t-code" x="688" y="958">esqlite + phoenix_pubsub</text>
+<text class="t-type" x="688" y="976">[~&gt; 0.9, ~&gt; 2.3]</text>
+<text class="t-desc" x="688" y="1000">one sqlite file per store, and</text>
+<text class="t-desc" x="688" y="1016">the registry PRJ broadcasts on</text>
+<text class="t-desc" x="688" y="1032">and the LiveView subscribes to</text>
+<rect class="b-mac" x="992" y="930" width="300" height="136" rx="10"/>
+<text class="t-code" x="1008" y="958">phoenix + live_view</text>
+<text class="t-type" x="1008" y="976">[~&gt; 1.8, ~&gt; 1.2]</text>
+<text class="t-desc" x="1008" y="1000">the console; bandit ~&gt; 1.12</text>
+<text class="t-desc" x="1008" y="1016">serves it and jason ~&gt; 1.4</text>
+<text class="t-desc" x="1008" y="1032">encodes, esbuild bundles app.js</text>
+<rect class="b-ext" x="32" y="1106" width="600" height="104" rx="10"/>
+<text class="t-code" x="48" y="1134">MCL_DATA_DIR</text>
+<text class="t-type" x="48" y="1152">[environment, /var/lib/mcl-bookclub]</text>
+<text class="t-desc" x="48" y="1176">read by event_store/0 and both sqlite stores; the log at</text>
+<text class="t-desc" x="48" y="1192">&lt;dir&gt;/mcl_bookclub_store, the read model at &lt;dir&gt;/bookclub.sqlite3</text>
+<rect class="b-ext" x="652" y="1106" width="640" height="104" rx="10"/>
+<text class="t-code" x="668" y="1134">MCL_HTTP_PORT, MCL_HEALTH_PORT</text>
+<text class="t-type" x="668" y="1152">[environment, 4000 and 8454]</text>
+<text class="t-desc" x="668" y="1176">the Endpoint binds 0.0.0.0:4000 and /health is answered on</text>
+<text class="t-desc" x="668" y="1192">8454; the Erlang twin owns 8488, so a shared box needs both</text>
+<rect class="b-ext" x="32" y="1238" width="1260" height="104" rx="10"/>
+<text class="t-code" x="48" y="1266">MCL_REALM_NAME, MCL_REALM_KEY, MCL_IDENTITY_KEY_PATH, SECRET_KEY_BASE</text>
+<text class="t-type" x="48" y="1284">[environment, config/runtime.exs]</text>
+<text class="t-desc" x="48" y="1308">the realm tag is derived from MCL_REALM_NAME here, not passed in; a prod boot refuses</text>
+<text class="t-desc" x="48" y="1324">to start without SECRET_KEY_BASE, and the node key lives on the mounted secrets volume</text>
+<path class="edge" d="M372 160H492" marker-end="url(#a)"/>
+<text class="t-rel" x="432" y="152" text-anchor="middle">event_store/0</text>
+<path class="edge" d="M832 190H952" marker-end="url(#a)"/>
+<text class="t-rel" x="892" y="182" text-anchor="middle">start/1 starts it</text>
+<path class="edge" d="M212 212V272" marker-end="url(#a)"/>
+<text class="t-rel" x="220" y="246">opens it first</text>
+<path class="edge" d="M632 212V272" marker-end="url(#a)"/>
+<text class="t-rel" x="640" y="246">capabilities/0 names it</text>
+<path class="edge" d="M1112 212V272" marker-end="url(#a)"/>
+<text class="t-rel" x="1120" y="246">three skip-policy children</text>
+<path class="edge" d="M212 408V468" marker-end="url(#a)"/>
+<text class="t-rel" x="220" y="442">delivers every event</text>
+<path class="edge" d="M700 408V440H1112V468" marker-end="url(#a)"/>
+<text class="t-rel" x="760" y="432">answers from the QRY desk</text>
+<path class="edge" d="M372 790H492" marker-end="url(#a)"/>
+<text class="t-rel" x="432" y="782" text-anchor="middle">mounts</text>
+<path class="edge" d="M832 790H952" marker-end="url(#a)"/>
+<text class="t-rel" x="892" y="782" text-anchor="middle">live /</text>
+<path class="edge" d="M952 760H900V672H700V648" marker-end="url(#a)"/>
+<text class="t-rel" x="710" y="664">task buttons dispatch the maybe_ desks</text>
+<path class="edge" d="M1112 708V648" marker-end="url(#a)"/>
+<text class="t-rel" x="1120" y="676">lookups call the desks</text>
+<rect class="b-sys" x="24" y="1374" width="22" height="14" rx="3"/>
+<text class="t-leg" x="54" y="1386">In scope</text>
+<rect class="b-per" x="110.8" y="1374" width="22" height="14" rx="3"/>
+<text class="t-leg" x="140.8" y="1386">Person</text>
+<rect class="b-mac" x="184.39999999999998" y="1374" width="22" height="14" rx="3"/>
+<text class="t-leg" x="214.39999999999998" y="1386">Macula infrastructure</text>
+<rect class="b-ext" x="357.0" y="1374" width="22" height="14" rx="3"/>
+<text class="t-leg" x="387.0" y="1386">External system</text>
+<rect class="b-cmp" x="490.0" y="1374" width="22" height="14" rx="3"/>
+<text class="t-leg" x="520.0" y="1386">Container or component</text>
+<rect class="bound" x="669.2" y="1374" width="22" height="14" rx="3"/>
+<text class="t-leg" x="699.2" y="1386">Boundary</text>
+</svg>
