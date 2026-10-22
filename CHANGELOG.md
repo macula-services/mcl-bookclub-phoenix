@@ -5,6 +5,16 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+- **The base library is macula 16** (macula-codebase-checks#4): the floors move
+  `~> 15.6` to `~> 16.0` and `mcl_om` to `~> 1.4`, the release whose own base
+  is macula 16 (`~> 1.0` also admits 1.3.0, which requires macula `~> 15.6`:
+  macula-codebase-checks#14). 16.0 keeps wire 1.0, so this service still
+  speaks to every wire 1.0 box; what it adds is the revocation bound
+  (macula#118). This service gates no overlay and issues no endorsement.
+
+
 ## [Unreleased]
 
 ### Added
