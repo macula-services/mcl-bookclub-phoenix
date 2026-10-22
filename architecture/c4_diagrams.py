@@ -31,6 +31,7 @@ KINDS = {
     "b-sys": ("#F5E9CC", "#A56F0A", "#3A2E13", "#E3AA3C"),   # in scope
     "b-per": ("#E3EBF2", "#3B5B7A", "#1D2A36", "#8EB4D8"),   # person
     "b-mac": ("#E6E4EE", "#5E5A78", "#26243A", "#A9A4C8"),   # Macula infrastructure
+    "b-lib": ("#E7F0E8", "#4A7A55", "#1A241C", "#8FBE9B"),   # library
     "b-ext": ("#ECEFED", "#8A9791", "#1C2421", "#7D8B85"),   # external system
     "b-cmp": ("#FFFFFF", "#8A9791", "#171F1C", "#7D8B85"),   # component or container
 }
@@ -75,7 +76,7 @@ DEFS = ('<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth=
         'orient="auto-start-reverse"><path class="arrowhead" d="M0 0L10 5L0 10z"/></marker></defs>')
 
 LEGEND = [("b-sys", "In scope"), ("b-per", "Person"), ("b-mac", "Macula infrastructure"),
-          ("b-ext", "External system"), ("b-cmp", "Container or component")]
+          ("b-lib", "Library"), ("b-ext", "External system"), ("b-cmp", "Container or component")]
 BOUNDARY = ("bound", "Boundary")
 
 
@@ -229,16 +230,16 @@ def components():
            "and the feed arrives over pubsub"], code=True)
     # The libraries.
     d.text("t-desc", 32, 916, "The libraries the release links:")
-    d.box("b-mac", 32, 930, 300, 136, "mcl_om + macula", "[~> 1.4, ~> 16.0]",
+    d.box("b-lib", 32, 930, 300, 136, "mcl_om + macula", "[~> 1.4, ~> 16.0]",
           ["boot/1: node key, realm join,", "QUIC pool, capability, health;",
            "publish on a fact topic"], code=True)
-    d.box("b-mac", 352, 930, 300, 136, "reckon_db + evoq", "[~> 5.11, ~> 1.27]",
+    d.box("b-lib", 352, 930, 300, 136, "reckon_db + evoq", "[~> 5.11, ~> 1.27]",
           ["the event log and the CQRS", "framework; reckon_evoq ~> 2.8",
            "is the adapter between them"], code=True)
-    d.box("b-mac", 672, 930, 300, 136, "esqlite + phoenix_pubsub", "[~> 0.9, ~> 2.3]",
+    d.box("b-lib", 672, 930, 300, 136, "esqlite + phoenix_pubsub", "[~> 0.9, ~> 2.3]",
           ["one sqlite file per store, and", "the registry PRJ broadcasts on",
            "and the LiveView subscribes to"], code=True)
-    d.box("b-mac", 992, 930, 300, 136, "phoenix + live_view", "[~> 1.8, ~> 1.2]",
+    d.box("b-lib", 992, 930, 300, 136, "phoenix + live_view", "[~> 1.8, ~> 1.2]",
           ["the console; bandit ~> 1.12", "serves it and jason ~> 1.4",
            "encodes, esbuild bundles app.js"], code=True)
     # The host's environment.
