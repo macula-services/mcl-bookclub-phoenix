@@ -19,9 +19,9 @@ service, both open, and `capabilities/0` is the list. The LiveView console runs 
 | --- | --- | --- |
 | mcl-bookclub-phoenix | In scope | Five apps in one release. Serves `mcl-bookclub/get_bookclub_by_id` on the mesh, the LiveView admin on 4000, and `/health` on 8454 |
 | Club operator | Person | Runs the club from the LiveView console: initiates and archives clubs, registers and unregisters members, procures and retires books, starts and finishes readings, plans parties |
-| Mesh consumer | Person | Another service or app on the mesh: calls `mcl-bookclub/get_bookclub_by_id` and subscribes to the three fact topics |
+| Mesh consumer | Person | Another service or app on the mesh: calls `mcl-bookclub/get_bookclub_by_id` and subscribes to its fact topics |
 | Host disk | External system | The club store and sqlite read model under `/var/lib/mcl-bookclub`, and the node identity key under `/etc/mcl/secrets` |
-| macula-realm | Macula infrastructure | Endorses the node's identity key and grants the scope `mcl-bookclub`: one action and three fact topics |
+| macula-realm | Macula infrastructure | Endorses the node's identity key and grants the scope `mcl-bookclub` for its action and its fact topics |
 | Macula stations, mesh DHT | Macula infrastructure | The pinned stations are the service's mesh entry points over QUIC; the DHT holds the adverts for its own procedure and for the `info` and `get_limits` mcl-om adds, and carries the fact topics |
 
 Same org, topics and procedure names as the Erlang bookclub, so a peer cannot tell

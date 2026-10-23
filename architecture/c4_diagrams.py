@@ -147,8 +147,8 @@ def context():
           ["The club store and sqlite read", "model under /var/lib, the node",
            "key under /etc/mcl/secrets"])
     d.box("b-mac", 365, 400, 270, 120, "macula-realm", "[Macula infrastructure]",
-          ["Endorses the node's identity key", "and grants the scope mcl-bookclub:",
-           "one action, three fact topics"])
+          ["Endorses the node's identity key", "and grants the scope mcl-bookclub",
+           "for its action and its fact topics"])
     d.box("b-mac", 690, 400, 270, 120, "Macula stations, mesh DHT", "[Macula infrastructure]",
           ["Pinned stations are the mesh entry", "(QUIC); the DHT holds the",
            "adverts, and carries the facts"])
@@ -185,9 +185,9 @@ def components():
            "then mcl_om:boot/1 with the service module;",
            "a store that cannot open stops the boot"], code=True)
     d.box("b-sys", 492, 76, 340, 136, "MclBookclubPhoenix.Service", "[mcl_om_service behaviour]",
-          ["The six callbacks plus event_store/0:",
-           "info, start, stop, health, capabilities,",
-           "identity_spec"], code=True)
+          ["The six mcl_om_service callbacks plus",
+           "event_store/0. mcl-om adds the open",
+           "info and get_limits beside them"], code=True)
     d.box("b-cmp", 952, 76, 340, 136, "MclBookclubPhoenix.Supervisor", "[supervisor, one_for_one]",
           ["Three children, the emitters. Started by",
            "Service.start/1, after boot's replay,",

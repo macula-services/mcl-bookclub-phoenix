@@ -58,9 +58,9 @@
 <rect class="b-sys" x="492" y="76" width="340" height="136" rx="10"/>
 <text class="t-code" x="508" y="104">MclBookclubPhoenix.Service</text>
 <text class="t-type" x="508" y="122">[mcl_om_service behaviour]</text>
-<text class="t-desc" x="508" y="146">The six callbacks plus event_store/0:</text>
-<text class="t-desc" x="508" y="162">info, start, stop, health, capabilities,</text>
-<text class="t-desc" x="508" y="178">identity_spec</text>
+<text class="t-desc" x="508" y="146">The six mcl_om_service callbacks plus</text>
+<text class="t-desc" x="508" y="162">event_store/0. mcl-om adds the open</text>
+<text class="t-desc" x="508" y="178">info and get_limits beside them</text>
 <rect class="b-cmp" x="952" y="76" width="340" height="136" rx="10"/>
 <text class="t-code" x="968" y="104">MclBookclubPhoenix.Supervisor</text>
 <text class="t-type" x="968" y="122">[supervisor, one_for_one]</text>
