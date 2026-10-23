@@ -9,7 +9,7 @@ name: ci
 #   push of v*   : ghcr.io/macula-services/mcl-bookclub-phoenix:<X.Y.Z>, then :latest once attest signed it
 #
 # ONLY A RELEASE MOVES :latest (promote-latest, after attest). A push to main
-# moves neither channel.
+# moves neither :latest nor a version tag.
 #
 # PATH FILTERS. A docs-only change must not rebuild or re-push an image. Keep
 # this list to things that cannot change what the image contains.

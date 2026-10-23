@@ -267,7 +267,7 @@ def components():
            "to start without SECRET_KEY_BASE, and the node key lives on the mounted secrets volume"], code=True)
     # The wiring between the boxes.
     d.edge("M372 160H492"); d.text("t-rel", 432, 152, "event_store/0", anchor="middle")
-    d.edge("M872 190H952"); d.text("t-rel", 912, 182, "start/1 starts it", anchor="middle")
+    d.edge("M832 190H952"); d.text("t-rel", 892, 182, "start/1 starts it", anchor="middle")
     d.edge("M212 212V272"); d.text("t-rel", 220, 246, "opens it first")
     d.edge("M632 212V272"); d.text("t-rel", 640, 246, "capabilities/0 names it")
     d.edge("M1112 212V272"); d.text("t-rel", 1120, 246, "three skip-policy children")

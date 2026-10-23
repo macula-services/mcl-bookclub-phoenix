@@ -170,8 +170,8 @@
 <text class="t-desc" x="48" y="1324">to start without SECRET_KEY_BASE, and the node key lives on the mounted secrets volume</text>
 <path class="edge" d="M372 160H492" marker-end="url(#a)"/>
 <text class="t-rel" x="432" y="152" text-anchor="middle">event_store/0</text>
-<path class="edge" d="M872 190H952" marker-end="url(#a)"/>
-<text class="t-rel" x="912" y="182" text-anchor="middle">start/1 starts it</text>
+<path class="edge" d="M832 190H952" marker-end="url(#a)"/>
+<text class="t-rel" x="892" y="182" text-anchor="middle">start/1 starts it</text>
 <path class="edge" d="M212 212V272" marker-end="url(#a)"/>
 <text class="t-rel" x="220" y="246">opens it first</text>
 <path class="edge" d="M632 212V272" marker-end="url(#a)"/>
