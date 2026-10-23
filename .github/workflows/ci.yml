@@ -8,9 +8,8 @@ name: ci
 #   push to main : ghcr.io/macula-services/mcl-bookclub-phoenix:main and :<sha>
 #   push of v*   : ghcr.io/macula-services/mcl-bookclub-phoenix:<X.Y.Z>, then :latest once attest signed it
 #
-# ONLY A RELEASE MOVES :latest (promote-latest, after attest), the dev fleet's deploy channel: each box's reconciler
-# pulls it, verifies the digest it resolved to and runs that digest, so a green v* tag
-# is the deploy. A push to main deploys nothing.
+# ONLY A RELEASE MOVES :latest (promote-latest, after attest). A push to main
+# moves neither :latest nor a version tag.
 #
 # PATH FILTERS. A docs-only change must not rebuild or re-push an image. Keep
 # this list to things that cannot change what the image contains.
@@ -21,12 +20,14 @@ on:
     paths-ignore:
       - '**.md'
       - 'docs/**'
+      - 'assets/**'
       - 'LICENSE'
   pull_request:
     branches: [main]
     paths-ignore:
       - '**.md'
       - 'docs/**'
+      - 'assets/**'
       - 'LICENSE'
   workflow_dispatch:
 
@@ -223,9 +224,10 @@ jobs:
       image: ghcr.io/macula-services/mcl-bookclub-phoenix
       digest: ${{ needs.image.outputs.digest }}
 
-  # :latest is the dev fleet's deploy channel, so it moves LAST: only on a v* tag, and only once
-  # attest has signed and attested this digest. A box that pulls :latest in the window between
-  # push and signature would otherwise refuse the release (and remember that for an hour).
+  # The mutable tag moves LAST, so it never names a digest before that digest is signed:
+  # only on a v* tag, and only once attest has signed and attested it. Anything that took
+  # the moving tag in the window between push and signature would otherwise refuse the
+  # release.
   promote-latest:
     needs: [image, attest]
     if: startsWith(github.ref, 'refs/tags/v') && needs.image.outputs.digest != ''
