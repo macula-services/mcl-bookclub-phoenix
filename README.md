@@ -53,3 +53,13 @@ second club.
 The runtime is pinned in `.tool-versions` (OTP 28.4.3, Elixir 1.18.4).
 The admin serves on `MCL_HTTP_PORT` (default 4000); build its JS first
 with `mix esbuild mcl_bookclub_phoenix_web`.
+
+## Architecture
+
+The C4 model is in [architecture/README.md](architecture/README.md), with its
+diagrams drawn by `architecture/c4_diagrams.py` into `assets/`. Change the
+script, run it (`python3 architecture/c4_diagrams.py`), and look at the result
+before committing.
+
+![mcl-bookclub-phoenix system context](assets/c4-context.svg)
+
