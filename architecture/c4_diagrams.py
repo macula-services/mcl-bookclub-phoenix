@@ -139,7 +139,7 @@ def context():
     d.box("b-per", 690, 30, 270, 120, "Mesh consumer", "[Person, app or service]",
           ["Calls mcl-bookclub/", "get_bookclub_by_id and",
            "subscribes to the fact topics"], person=True)
-    d.box("b-sys", 365, 186, 270, 152, "mcl-bookclub-phoenix", "[mcl_om mesh service, own box]",
+    d.box("b-sys", 365, 186, 270, 152, "mcl-bookclub-phoenix", "[mcl_om mesh service]",
           ["Five umbrella apps: CMD, PRJ, QRY,", "the facade and the web console.",
            "Serves one procedure of its own on", "the mesh, the LiveView admin on",
            "4000, and /health on 8454"])
@@ -197,7 +197,7 @@ def components():
           ["start_store, wait until reckon_db lists it,",
            "then :evoq_store_subscription, the one",
            "subscription that feeds every handler"], code=True)
-    d.box("b-sys", 492, 272, 340, 136, "MclBookclubPhoenix.GetBookclubByIdHandler", "[macula_response]",
+    d.box("b-sys", 492, 272, 380, 136, "MclBookclubPhoenix.GetBookclubByIdHandler", "[macula_response]",
           ["handle_request/2 reads club_id with",
            "mcl_om_wire:field/2 and answers from the",
            "QRY desk; text back as CBOR text"], code=True)
@@ -267,7 +267,7 @@ def components():
            "to start without SECRET_KEY_BASE, and the node key lives on the mounted secrets volume"], code=True)
     # The wiring between the boxes.
     d.edge("M372 160H492"); d.text("t-rel", 432, 152, "event_store/0", anchor="middle")
-    d.edge("M832 190H952"); d.text("t-rel", 892, 182, "start/1 starts it", anchor="middle")
+    d.edge("M872 190H952"); d.text("t-rel", 912, 182, "start/1 starts it", anchor="middle")
     d.edge("M212 212V272"); d.text("t-rel", 220, 246, "opens it first")
     d.edge("M632 212V272"); d.text("t-rel", 640, 246, "capabilities/0 names it")
     d.edge("M1112 212V272"); d.text("t-rel", 1120, 246, "three skip-policy children")
